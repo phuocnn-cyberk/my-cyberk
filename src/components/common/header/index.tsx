@@ -20,7 +20,7 @@ import { ContactButton } from "../contact-button";
 import { cn } from "@/lib/utils";
 
 const SERVICE_SUB_ITEMS = [
-  { label: "MVP Development", path: "#" },
+  { label: "MVP Development", path: "/services/mvp-development" },
   { label: "Smart Contract Development", path: "#" },
   { label: "Dedicated Lab", path: "#" },
   { label: "MVP Agent Development", path: "#" },
@@ -148,7 +148,7 @@ export const Header: FC = () => {
                         <Link
                           href={subItem.path}
                           className={cn(
-                            "cursor-pointer text-sm text-[#4B4B4B] hover:text-black font-light w-full px-4 py-2 block",
+                            "cursor-pointer text-sm text-[#4B4B4B] hover:text-black whitespace-nowrap font-light w-full px-4 py-2 block",
                             index === 0 && "!text-[#2684FF]"
                           )}
                         >
