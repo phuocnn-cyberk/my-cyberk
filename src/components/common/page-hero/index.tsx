@@ -27,7 +27,7 @@ export const PageHero: FC<PageHeroProps> = ({
   sectionClassName,
 }) => {
   return (
-    <section className={cn("", sectionClassName)}>
+    <section className={cn("bg-white/80", sectionClassName)}>
       <div className="container mx-auto px-4 py-20 md:py-[175px]">
         <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-6 md:gap-[60px]">
           <div>

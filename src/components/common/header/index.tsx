@@ -21,7 +21,10 @@ import { cn } from "@/lib/utils";
 
 const SERVICE_SUB_ITEMS = [
   { label: "MVP Development", path: "/services/mvp-development" },
-  { label: "Smart Contract Development", path: "#" },
+  {
+    label: "Smart Contract Development",
+    path: "/services/smart-contract-development",
+  },
   { label: "Dedicated Lab", path: "#" },
   { label: "MVP Agent Development", path: "/services/mvp-agent-development" },
 ];
