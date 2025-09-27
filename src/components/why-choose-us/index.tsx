@@ -34,13 +34,15 @@ interface FeatureCardProps {
 }
 
 const FeatureCard: FC<FeatureCardProps> = ({ feature }) => (
-  <Card className="rounded-2xl border border-black/10 shadow-lg h-full">
-    <CardContent className="p-8">
+  <Card className="rounded-2xl shadow-[0px_4px_4px_0px_#3535351A] h-full border-none p-0">
+    <CardContent className="p-6 md:pt-0">
       <div className="relative w-[63px] h-[64px] mb-6">
         <Image src={feature.icon} alt={`${feature.title} icon`} layout="fill" />
       </div>
-      <h3 className="text-2xl font-medium text-black mb-4">{feature.title}</h3>
-      <p className="text-base text-black/70 leading-relaxed">
+      <h3 className="text-base md:text-2xl font-medium text-black mb-4">
+        {feature.title}
+      </h3>
+      <p className="text-xs md:text-sm text-[#212121] font-normal leading-relaxed">
         {feature.description}
       </p>
     </CardContent>
@@ -49,13 +51,13 @@ const FeatureCard: FC<FeatureCardProps> = ({ feature }) => (
 
 export const WhyChooseUsSection: FC = () => {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-15 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-5xl font-medium text-black mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-6 md:mb-16">
+          <h2 className="text-2xl md:text-5xl font-medium text-black mb-4 md:mb-6">
             Why Choose Us
           </h2>
-          <p className="text-xl text-black/80">
+          <p className="text-sm md:text-xl text-[#212121] font-normal">
             Cyberk is a trusted Web3 development partner, delivering speed,
             reliability, and innovation to help startups always lead the market
           </p>

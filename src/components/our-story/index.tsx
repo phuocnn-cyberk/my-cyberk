@@ -4,23 +4,23 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export const OurStorySection: FC = () => {
   return (
-    <section className="bg-[#FAFAFA] py-24">
+    <section className="bg-[#F6FAFF] py-15 md:py-24">
       <div className="container mx-auto px-4">
-        <h2 className="text-5xl font-medium text-center text-black mb-20">
+        <h2 className="text-2xl md:text-5xl font-medium text-center text-black mb-6 md:mb-20">
           Our Story
         </h2>
         <div className="max-w-[1090px] mx-auto">
           <Card className="shadow-xl rounded-2xl border-none p-0">
             <CardContent className="p-0 flex flex-wrap lg:flex-nowrap gap-6">
-              <div className="relative w-full rounded-l-2xl lg:w-[520px] flex-shrink-0 shadow-[0px_4px_4px_0px_#00000040]">
+              <div className="relative w-full h-63 lg:h-auto rounded-t-2xl lg:rounded-l-2xl lg:rounded-t-none lg:w-[520px] flex-shrink-0 shadow-[0px_4px_4px_0px_#00000040]">
                 <Image
                   src="/images/cyberk-collective.png"
                   alt="Cyberk team collective"
                   layout="fill"
                   objectFit="cover"
-                  className="rounded-l-2xl"
+                  className="rounded-t-2xl lg:rounded-l-2xl lg:rounded-t-none"
                 />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,white_0%,rgba(255,255,255,0)_45.32%)] rounded-l-2xl" />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,white_0%,rgba(255,255,255,0)_45.32%)] rounded-t-2xl lg:rounded-l-2xl lg:rounded-t-none" />
                 <div className="absolute top-6 inset-0 flex items-start justify-center">
                   <Image
                     src="/cyberk-logo.svg"
@@ -30,7 +30,7 @@ export const OurStorySection: FC = () => {
                   />
                 </div>
               </div>
-              <div className="p-6 space-y-4 text-base text-[#212121] leading-relaxed">
+              <div className="p-6 max-md:pt-0 space-y-4 text-base text-[#212121] leading-relaxed rounded-b-2xl lg:rounded-b-none">
                 <p>
                   Before starting Cyberk, Jon and Anderson were founders chasing
                   their own startup dreams. They had the vision, but they hit
