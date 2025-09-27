@@ -4,7 +4,7 @@ import { FC, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { AlignJustify, ArrowRight } from "lucide-react";
+import { AlignJustify } from "lucide-react";
 
 import {
   DropdownMenu,
@@ -33,7 +33,7 @@ const MENU_LIST = [
   },
   {
     label: "About Us",
-    path: "#",
+    path: "/about-us",
   },
 ];
 
@@ -71,15 +71,48 @@ export const Header: FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 z-50 w-full flex justify-between items-center px-4 md:py-2 py-1 transition-all duration-300 md:px-8 lg:px-12 ${
+      className={`fixed top-0 left-0 z-50 w-full flex justify-between items-center px-5 py-2 transition-all duration-300 ${
         show ? "translate-y-0" : "-translate-y-full"
       } ${isScrolled ? "bg-white" : "bg-transparent"}`}
     >
-      <Link href="/">
-        <Image src="/cyberk-logo.svg" alt="logo" width={173} height={32} />
-      </Link>
+      <div className="flex items-center">
+        <div className="lg:hidden flex items-center">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon" className="h-6 w-4 mr-4">
+                <AlignJustify className={`!h-4 !w-[18px] text-[#323232]`} />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="ml-4 w-56 border-none bg-[#18181A] text-white">
+              {MENU_LIST.map((item) => (
+                <DropdownMenuItem key={item.label} asChild>
+                  <Link href={item.path} className="w-full">
+                    {item.label}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
+        <Link href="/">
+          <Image
+            src="/cyberk-logo.svg"
+            alt="logo"
+            width={173}
+            height={32}
+            className="hidden lg:block"
+          />
+          <Image
+            src="/cyberk-logo-mobile.svg"
+            alt="logo"
+            width={168}
+            height={22}
+            className="block lg:hidden"
+          />
+        </Link>
+      </div>
       <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <nav className="flex items-center gap-4">
+        <nav className="flex items-center">
           {MENU_LIST.map((item) => (
             <Link key={item.label} href={item.path}>
               <MenuItem isActive={pathname === item.path}>
@@ -90,28 +123,7 @@ export const Header: FC = () => {
         </nav>
       </div>
       <div>
-        <ContactButton className="text-base h-10 hidden lg:flex" />
-        <div className="lg:hidden">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <AlignJustify className="h-7 w-7 text-white" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="mr-4 w-56 border-none bg-[#18181A] text-white">
-              {MENU_LIST.map((item) => (
-                <DropdownMenuItem key={item.label} asChild>
-                  <Link href={item.path} className="w-full">
-                    {item.label}
-                  </Link>
-                </DropdownMenuItem>
-              ))}
-              <DropdownMenuItem>
-                <ContactButton className="w-full font-bold justify-center h-10" />
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </div>
+        <ContactButton className="text-xs lg:text-base h-7 lg:h-10" />
       </div>
     </header>
   );

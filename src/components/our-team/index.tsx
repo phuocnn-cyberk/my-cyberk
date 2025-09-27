@@ -13,15 +13,17 @@ const SCROLLING_IMAGES = [...TEAM_IMAGES, ...TEAM_IMAGES];
 
 export const OurTeamSection: FC = () => {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-15 md:py-24">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-5xl font-medium text-black mb-16">Our Team</h2>
+        <h2 className="text-2xl md:text-5xl leading-tight font-medium text-[#212121] mb-6 md:mb-16">
+          Our Team
+        </h2>
       </div>
       <div className="w-full overflow-hidden">
         <div className="flex animate-marquee">
           {SCROLLING_IMAGES.map((src, index) => (
-            <div key={index} className="flex-shrink-0 mx-4">
-              <div className="relative w-[400px] h-[300px] rounded-lg overflow-hidden">
+            <div key={index} className="flex-shrink-0 mx-1 md:mx-4">
+              <div className="relative w-[207px] h-[136px] md:w-[400px] md:h-[300px] rounded-lg overflow-hidden">
                 <Image
                   src={src}
                   alt={`Our team member ${index + 1}`}

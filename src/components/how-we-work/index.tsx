@@ -19,11 +19,11 @@ export const HowWeWorkSection: FC = () => {
   return (
     <section className="bg-white py-24">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-[733px] mx-auto mb-20">
-          <h2 className="text-5xl font-medium text-[#212121] mb-6">
+        <div className="text-center max-w-[733px] mx-auto mb-6 md:mb-20">
+          <h2 className="text-2xl md:text-5xl leading-tight font-medium text-[#212121] mb-2 md:mb-6">
             How We Work
           </h2>
-          <p className="text-xl text-[#212121]">
+          <p className="text-sm md:text-xl font-normal leading-tight text-[#212121]">
             Cyberk is built for founders who can’t afford to wait. We deliver
             MVPs in less than 30 days, combining speed with quality and
             security.
@@ -40,7 +40,7 @@ export const HowWeWorkSection: FC = () => {
               objectFit="cover"
             />
           </div>
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-4 md:gap-10">
             {PROCESS_STEPS.map((step) => {
               const isActive = activeStep === step;
               return (
@@ -62,7 +62,7 @@ export const HowWeWorkSection: FC = () => {
                   />
                   <p
                     className={cn(
-                      "text-2xl transition-colors",
+                      "text-sm md:text-2xl transition-colors",
                       isActive
                         ? "font-medium"
                         : "font-light group-hover:text-black/80"

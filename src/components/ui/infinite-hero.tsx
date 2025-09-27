@@ -294,7 +294,7 @@ export default function InfiniteHero() {
         <div className="text-center">
           <h1
             ref={h1Ref}
-            className="text-5xl md:text-7xl font-bold mb-6 max-w-4xl leading-tight"
+            className="text-[32px] md:text-7xl font-bold mb-6 lg:max-w-4xl leading-tight"
           >
             <span className="flex items-center justify-center gap-4">
               Fastest
@@ -305,7 +305,7 @@ export default function InfiniteHero() {
           </h1>
           <p
             ref={pRef}
-            className="max-w-[1000px] font-light text-2xl text-black/70 mb-8"
+            className="max-w-[1000px] font-light text-base lg:text-2xl text-black/70 mb-8"
           >
             Cyberk is the fastest blockchain development partner for startups -
             launch your MVP in 30 days so you’re always ready for the next big

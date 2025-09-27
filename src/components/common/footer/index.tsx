@@ -55,13 +55,16 @@ const FooterLinkColumn: FC<{
   links: { label: string; href: string }[];
 }> = ({ title, links }) => (
   <div>
-    <h3 className="text-sm font-bold text-black/50 tracking-widest mb-6">
+    <h3 className="text-xl text-[#272525] tracking-widest mb-4 md:mb-6">
       {title}
     </h3>
     <ul className="space-y-4">
       {links.map((link) => (
         <li key={link.label}>
-          <Link href={link.href} className="text-black/80 hover:text-black">
+          <Link
+            href={link.href}
+            className="text-[#717070] whitespace-nowrap hover:text-black cursor-pointer"
+          >
             {link.label}
           </Link>
         </li>
@@ -72,24 +75,26 @@ const FooterLinkColumn: FC<{
 
 export const Footer: FC = () => {
   return (
-    <footer className="bg-[#F6FAFF] text-black pt-23">
+    <footer className="bg-[#F6FAFF] pt-15 md:pt-23">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-3">
-          <div className="max-w-[373px] lg:col-span-1">
-            <h2 className="text-5xl font-medium leading-tight mb-8">
-              Ready To
-              <br />
-              Get Started!
-            </h2>
-            <ContactButton className="h-9 px-8 text-sm" />
+          <div className="max-w-[373px] lg:col-span-1 mb-12 lg:mb-0">
+            <div className="flex items-center justify-between lg:block">
+              <h2 className="text-2xl md:text-5xl font-medium text-[#2D2D2D] leading-tight lg:mb-8">
+                Ready To
+                <br />
+                Get Started!
+              </h2>
+              <ContactButton className="h-9 px-8 text-sm" />
+            </div>
           </div>
-          <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-3">
+          <div className="lg:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-12">
             <FooterLinkColumn title="COMPANY" links={FOOTER_LINKS.COMPANY} />
-            <FooterLinkColumn title="SERVICES" links={FOOTER_LINKS.SERVICES} />
             <FooterLinkColumn title="CONTACT" links={FOOTER_LINKS.CONTACT} />
+            <FooterLinkColumn title="SERVICES" links={FOOTER_LINKS.SERVICES} />
           </div>
         </div>
-        <div className="flex justify-between items-center pt-25 pb-5 text-sm text-black/50">
+        <div className="flex flex-col gap-y-4 text-center sm:text-left sm:flex-row justify-between items-center pt-14 md:pt-25 pb-5 text-sm text-black/50">
           <p>All copyrights reserved by Cyberk © 2025</p>
           <LiveClock />
         </div>

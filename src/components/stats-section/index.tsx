@@ -26,18 +26,18 @@ interface StatItemProps {
 
 const StatItem: FC<StatItemProps> = ({ value, description }) => (
   <div className="text-center">
-    <p className="text-4xl md:text-5xl font-bold text-[#2172E6] mb-4">
-      {value}
+    <p className="text-xl md:text-5xl font-bold text-[#2172E6] mb-2">{value}</p>
+    <p className="text-sm md:text-lg leading-tight text-[#212121] whitespace-pre-line">
+      {description}
     </p>
-    <p className="text-base text-black/70 whitespace-pre-line">{description}</p>
   </div>
 );
 
 export const StatsSection: FC = () => {
   return (
-    <div className="bg-[#F6FAFF] py-24">
+    <div className="bg-[#F6FAFF] py-10 md:py-24">
       <section className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-10 md:gap-16">
           {STATS_DATA.map((stat) => (
             <StatItem key={stat.value} {...stat} />
           ))}
