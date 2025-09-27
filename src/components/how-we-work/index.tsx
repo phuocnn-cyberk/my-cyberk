@@ -62,10 +62,7 @@ export const HowWeWorkSection: FC = () => {
                   />
                   <p
                     className={cn(
-                      "text-sm md:text-2xl transition-colors",
-                      isActive
-                        ? "font-medium"
-                        : "font-light group-hover:text-black/80"
+                      "text-sm md:text-lg transition-colors font-medium"
                     )}
                   >
                     {step}

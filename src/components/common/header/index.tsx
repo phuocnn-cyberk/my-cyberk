@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 
-import { MenuItem } from "./components";
+import { MenuItem as DesktopMenuItem } from "./components";
 import Image from "next/image";
 import { ContactButton } from "../contact-button";
 import { cn } from "@/lib/utils";
@@ -49,10 +49,59 @@ const MENU_LIST = [
   },
 ];
 
+const MobileSubMenu: FC<{
+  item: (typeof MENU_LIST)[0];
+  closeMenu: () => void;
+  pathname: string;
+}> = ({ item, closeMenu, pathname }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <DropdownMenuItem
+      onSelect={(e) => e.preventDefault()}
+      className="!p-0 focus:!bg-transparent"
+    >
+      <div className="w-full">
+        <div
+          onClick={() => setIsOpen(!isOpen)}
+          className="flex cursor-pointer items-center justify-between rounded-lg bg-[#F6FAFF] p-3"
+        >
+          <span className="text-sm font-medium text-[#212121]">
+            {item.label}
+          </span>
+          <ChevronDown
+            className={`h-4 w-4 transition-transform duration-200 ${
+              isOpen ? "rotate-180" : ""
+            }`}
+          />
+        </div>
+        {isOpen && (
+          <div className="flex flex-col gap-4 rounded-b-lg bg-[#F6FAFF] px-3 pb-3">
+            {item.subItems?.map((subItem) => (
+              <Link
+                key={subItem.label}
+                href={subItem.path}
+                onClick={closeMenu}
+                className={cn(
+                  "w-full cursor-pointer text-xs font-light text-[#000] hover:text-black",
+                  pathname === subItem.path && "!text-[#2684FF]"
+                )}
+              >
+                {subItem.label}
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+    </DropdownMenuItem>
+  );
+};
+
 export const Header: FC = () => {
   const pathname = usePathname();
   const [show, setShow] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const lastScrollY = useRef(0);
 
   useEffect(() => {
@@ -81,10 +130,6 @@ export const Header: FC = () => {
     };
   }, []);
 
-  const mobileMenuList = MENU_LIST.flatMap((item) =>
-    item.subItems ? item.subItems : item
-  );
-
   return (
     <header
       className={`fixed top-0 left-0 z-50 w-full flex justify-between items-center px-5 py-2 transition-all duration-300 ${
@@ -93,20 +138,42 @@ export const Header: FC = () => {
     >
       <div className="flex items-center">
         <div className="lg:hidden flex items-center">
-          <DropdownMenu>
+          <DropdownMenu
+            open={isMobileMenuOpen}
+            onOpenChange={setMobileMenuOpen}
+          >
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon" className="h-6 w-4 mr-4">
                 <AlignJustify className={`!h-4 !w-[18px] text-[#323232]`} />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="ml-4 w-56 border-none bg-[#18181A] text-white">
-              {mobileMenuList.map((item) => (
-                <DropdownMenuItem key={item.label} asChild>
-                  <Link href={item.path} className="w-full">
-                    {item.label}
-                  </Link>
-                </DropdownMenuItem>
-              ))}
+            <DropdownMenuContent className="w-56 space-y-8 border-none h-screen bg-white p-6 text-black">
+              {MENU_LIST.map((item) => {
+                if (item.subItems) {
+                  return (
+                    <MobileSubMenu
+                      key={item.label}
+                      item={item}
+                      closeMenu={() => setMobileMenuOpen(false)}
+                      pathname={pathname}
+                    />
+                  );
+                }
+                return (
+                  <DropdownMenuItem key={item.label} asChild>
+                    <Link
+                      href={item.path}
+                      className={cn(
+                        "w-full",
+                        pathname === item.path && "text-[#2684FF]"
+                      )}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  </DropdownMenuItem>
+                );
+              })}
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
@@ -136,10 +203,10 @@ export const Header: FC = () => {
               return (
                 <DropdownMenu key={item.label}>
                   <DropdownMenuTrigger asChild>
-                    <MenuItem isActive={isServiceActive}>
+                    <DesktopMenuItem isActive={isServiceActive}>
                       {item.label}
                       <ChevronDown className="ml-1 h-4 w-4" />
-                    </MenuItem>
+                    </DesktopMenuItem>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="bg-white rounded-xl shadow-lg border-none mt-2 w-56">
                     {item.subItems.map((subItem, index) => (
@@ -165,9 +232,9 @@ export const Header: FC = () => {
             }
             return (
               <Link key={item.label} href={item.path}>
-                <MenuItem isActive={pathname === item.path}>
+                <DesktopMenuItem isActive={pathname === item.path}>
                   {item.label}
-                </MenuItem>
+                </DesktopMenuItem>
               </Link>
             );
           })}

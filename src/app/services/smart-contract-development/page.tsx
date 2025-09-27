@@ -4,6 +4,8 @@ import Image from "next/image";
 import { GridPatternSpotlight } from "@/components/ui/grid-parttern-spotlight-card";
 import IsThisRightForYou from "./components/is-this-right-for-you";
 import Benefits from "./components/benefits";
+import Achievements from "./components/achievements";
+import TypesOfSmartContracts from "./components/types-of-smart-contracts";
 
 const SmartContractDevelopmentPage: FC = () => {
   return (
@@ -47,6 +49,8 @@ const SmartContractDevelopmentPage: FC = () => {
       </GridPatternSpotlight>
       <IsThisRightForYou />
       <Benefits />
+      <Achievements />
+      <TypesOfSmartContracts />
     </main>
   );
 };

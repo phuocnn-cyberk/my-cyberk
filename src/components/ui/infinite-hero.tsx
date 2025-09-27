@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
-import { useMemo, useRef } from "react";
+import { FC, useMemo, useRef } from "react";
 import * as THREE from "three";
 import Image from "next/image";
 import { ContactButton } from "@/components/common/contact-button";
@@ -54,6 +54,41 @@ interface ShaderBackgroundProps {
   uniforms?: { [key: string]: { value: unknown } };
   className?: string;
 }
+
+const STATS_DATA = [
+  {
+    value: "5+ Years",
+    description: "Experience in Blockchain\nDevelopment",
+  },
+  {
+    value: "30 Days",
+    description: "Guarantee MVP\nDelivery",
+  },
+  {
+    value: "50+",
+    description: "Blockchain Solutions\nDelivered",
+  },
+  {
+    value: "$300M+",
+    description: "In TLV for Smart\nContract Development",
+  },
+];
+
+interface StatItemProps {
+  value: string;
+  description: string;
+}
+
+const StatItem: FC<StatItemProps> = ({ value, description }) => (
+  <div className="bg-[#F6FAFF] p-8 text-center rounded-lg">
+    <p className="text-xl md:text-[40px] font-bold text-[#2172E6] mb-2">
+      {value}
+    </p>
+    <p className="text-sm md:text-lg leading-tight text-[#212121] whitespace-pre-line">
+      {description}
+    </p>
+  </div>
+);
 
 function ShaderBackground({
   vertexShader = `
@@ -314,9 +349,18 @@ export default function InfiniteHero() {
 
           <div
             ref={ctaRef}
-            className="mt-10 flex flex-row items-center justify-center"
+            className="lg:mb-20 mt-10 flex flex-row items-center justify-center"
           >
             <ContactButton className="text-base h-11 !px-6" />
+          </div>
+        </div>
+      </div>
+      <div className="absolute bottom-10 left-1/2 z-20 hidden w-full max-w-[1160px] -translate-x-1/2 px-4 md:block">
+        <div className="rounded-lg bg-white p-2 shadow-[0px_10px_40px_0px_rgba(33,114,230,0.1)]">
+          <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
+            {STATS_DATA.map((stat) => (
+              <StatItem key={stat.value} {...stat} />
+            ))}
           </div>
         </div>
       </div>
