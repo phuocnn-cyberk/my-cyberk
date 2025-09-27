@@ -4,7 +4,7 @@ import { FC, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { AlignJustify } from "lucide-react";
+import { AlignJustify, ChevronDown } from "lucide-react";
 
 import {
   DropdownMenu,
@@ -17,6 +17,14 @@ import { Button } from "@/components/ui/button";
 import { MenuItem } from "./components";
 import Image from "next/image";
 import { ContactButton } from "../contact-button";
+import { cn } from "@/lib/utils";
+
+const SERVICE_SUB_ITEMS = [
+  { label: "MVP Development", path: "#" },
+  { label: "Smart Contract Development", path: "#" },
+  { label: "Dedicated Lab", path: "#" },
+  { label: "MVP Agent Development", path: "#" },
+];
 
 const MENU_LIST = [
   {
@@ -25,7 +33,8 @@ const MENU_LIST = [
   },
   {
     label: "Service",
-    path: "#",
+    path: "/services",
+    subItems: SERVICE_SUB_ITEMS,
   },
   {
     label: "Case Studies",
@@ -69,6 +78,10 @@ export const Header: FC = () => {
     };
   }, []);
 
+  const mobileMenuList = MENU_LIST.flatMap((item) =>
+    item.subItems ? item.subItems : item
+  );
+
   return (
     <header
       className={`fixed top-0 left-0 z-50 w-full flex justify-between items-center px-5 py-2 transition-all duration-300 ${
@@ -84,7 +97,7 @@ export const Header: FC = () => {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="ml-4 w-56 border-none bg-[#18181A] text-white">
-              {MENU_LIST.map((item) => (
+              {mobileMenuList.map((item) => (
                 <DropdownMenuItem key={item.label} asChild>
                   <Link href={item.path} className="w-full">
                     {item.label}
@@ -113,13 +126,48 @@ export const Header: FC = () => {
       </div>
       <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <nav className="flex items-center">
-          {MENU_LIST.map((item) => (
-            <Link key={item.label} href={item.path}>
-              <MenuItem isActive={pathname === item.path}>
-                {item.label}
-              </MenuItem>
-            </Link>
-          ))}
+          {MENU_LIST.map((item) => {
+            if (item.subItems) {
+              const isServiceActive =
+                item.path !== "#" && pathname.startsWith(item.path);
+              return (
+                <DropdownMenu key={item.label}>
+                  <DropdownMenuTrigger asChild>
+                    <MenuItem isActive={isServiceActive}>
+                      {item.label}
+                      <ChevronDown className="ml-1 h-4 w-4" />
+                    </MenuItem>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="bg-white rounded-xl shadow-lg border-none mt-2 w-56">
+                    {item.subItems.map((subItem, index) => (
+                      <DropdownMenuItem
+                        key={subItem.label}
+                        asChild
+                        className="p-0"
+                      >
+                        <Link
+                          href={subItem.path}
+                          className={cn(
+                            "cursor-pointer text-sm text-[#4B4B4B] hover:text-black font-light w-full px-4 py-2 block",
+                            index === 0 && "!text-[#2684FF]"
+                          )}
+                        >
+                          {subItem.label}
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              );
+            }
+            return (
+              <Link key={item.label} href={item.path}>
+                <MenuItem isActive={pathname === item.path}>
+                  {item.label}
+                </MenuItem>
+              </Link>
+            );
+          })}
         </nav>
       </div>
       <div>

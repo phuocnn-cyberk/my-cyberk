@@ -119,6 +119,14 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  body[data-scroll-locked] {
+     margin-right: 0px !important;
+  }
+  
+  html {
+    overflow-y: scroll;
+  }
 }
 
 @keyframes marquee {
