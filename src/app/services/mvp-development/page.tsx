@@ -5,6 +5,7 @@ import { GridPatternSpotlight } from "@/components/ui/grid-parttern-spotlight-ca
 import IsThisRightForYou from "./components/is-this-right-for-you";
 import Benefits from "./components/benefits";
 import OurProcess from "./components/our-process";
+import NotableCaseStudies from "./components/notable-case-studies";
 
 const MvpDevelopmentPage: FC = () => {
   return (
@@ -47,6 +48,7 @@ const MvpDevelopmentPage: FC = () => {
       <IsThisRightForYou />
       <Benefits />
       <OurProcess />
+      <NotableCaseStudies />
     </main>
   );
 };

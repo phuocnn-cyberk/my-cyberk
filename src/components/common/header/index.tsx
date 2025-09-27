@@ -23,7 +23,7 @@ const SERVICE_SUB_ITEMS = [
   { label: "MVP Development", path: "/services/mvp-development" },
   { label: "Smart Contract Development", path: "#" },
   { label: "Dedicated Lab", path: "#" },
-  { label: "MVP Agent Development", path: "#" },
+  { label: "MVP Agent Development", path: "/services/mvp-agent-development" },
 ];
 
 const MENU_LIST = [
