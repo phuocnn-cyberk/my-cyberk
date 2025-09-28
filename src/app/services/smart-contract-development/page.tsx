@@ -3,7 +3,7 @@ import { ContactButton } from "@/components/common/contact-button";
 import Image from "next/image";
 import { GridPatternSpotlight } from "@/components/ui/grid-parttern-spotlight-card";
 import IsThisRightForYou from "./components/is-this-right-for-you";
-import Benefits from "./components/benefits";
+import Benefits from "./components/details";
 import Achievements from "./components/achievements";
 import TypesOfSmartContracts from "./components/types-of-smart-contracts";
 

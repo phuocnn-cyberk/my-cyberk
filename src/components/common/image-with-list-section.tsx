@@ -1,10 +1,16 @@
 import Image from "next/image";
 import { FC } from "react";
 
+interface Section {
+  title: string;
+  items: string[];
+}
+
 interface ImageWithListSectionProps {
   title: string;
-  subtitle: string;
-  items: string[];
+  subtitle?: string;
+  items?: string[];
+  sections?: Section[];
   imageSrc: string;
   imageAlt: string;
   imagePosition?: "left" | "right";
@@ -14,6 +20,7 @@ export const ImageWithListSection: FC<ImageWithListSectionProps> = ({
   title,
   subtitle,
   items,
+  sections,
   imageSrc,
   imageAlt,
   imagePosition = "left",
@@ -35,20 +42,46 @@ export const ImageWithListSection: FC<ImageWithListSectionProps> = ({
       <h2 className="mb-3 md:mb-6 text-2xl md:text-5xl font-medium text-[#212121]">
         {title}
       </h2>
-      <p className="mb-5 md:mb-8 text-sm md:text-xl text-[#212121]">
-        {subtitle}
-      </p>
-      <ul className="space-y-3 md:space-y-6">
-        {items.map((item, index) => (
-          <li
-            key={index}
-            className="flex items-start text-sm md:text-xl text-[#212121]"
-          >
-            <span className="mr-3 mt-1 block h-2 w-2 flex-shrink-0 rounded-full bg-[#2684FF]"></span>
-            <span>{item}</span>
-          </li>
-        ))}
-      </ul>
+      {subtitle && (
+        <p className="mb-5 md:mb-8 text-sm md:text-xl text-[#212121]">
+          {subtitle}
+        </p>
+      )}
+      {items && (
+        <ul className="space-y-3 md:space-y-6">
+          {items.map((item, index) => (
+            <li
+              key={index}
+              className="flex items-start text-sm md:text-xl text-[#5a5a5a]"
+            >
+              <span className="mr-3 mt-2 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#212121]"></span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+      {sections && (
+        <div className="space-y-5 md:space-y-8">
+          {sections.map((section) => (
+            <div key={section.title}>
+              <h3 className="mb-2 text-lg md:text-xl font-semibold text-[#212121]">
+                {section.title}
+              </h3>
+              <ul className="space-y-2 md:space-y-3">
+                {section.items.map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start text-sm md:text-xl text-[#5a5a5a]"
+                  >
+                    <span className="mr-3 mt-2 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#212121]"></span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 

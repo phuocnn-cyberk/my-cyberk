@@ -21,8 +21,11 @@ const FOOTER_LINKS = {
     { label: "MVP Agent Development", href: "/services/mvp-agent-development" },
   ],
   CONTACT: [
-    { label: "Linkedin", href: "#" },
-    { label: "Facebook", href: "#" },
+    {
+      label: "Linkedin",
+      href: "https://www.linkedin.com/company/cyberk-io/?viewAsMember=true",
+    },
+    { label: "Facebook", href: "https://www.facebook.com/Cyberk.io" },
     { label: "Telegram", href: "https://t.me/cyberk_anderson" },
     { label: "Hello@cyberk.io", href: "mailto:Hello@cyberk.io" },
   ],
