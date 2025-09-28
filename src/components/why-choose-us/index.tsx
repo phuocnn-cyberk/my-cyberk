@@ -36,8 +36,14 @@ interface FeatureCardProps {
 const FeatureCard: FC<FeatureCardProps> = ({ feature }) => (
   <Card className="rounded-2xl shadow-[0px_4px_4px_0px_#3535351A] h-full border-none p-0">
     <CardContent className="p-6 md:pt-0">
-      <div className="relative w-[63px] h-[64px] mb-6">
-        <Image src={feature.icon} alt={`${feature.title} icon`} layout="fill" />
+      <div className="relative w-16 h-16 mb-6">
+        <Image
+          src={feature.icon}
+          alt={`${feature.title} icon`}
+          width={64}
+          height={64}
+          className="w-full h-full"
+        />
       </div>
       <h3 className="text-base md:text-2xl font-medium text-black mb-4">
         {feature.title}

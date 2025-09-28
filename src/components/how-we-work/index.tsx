@@ -37,7 +37,7 @@ export const HowWeWorkSection: FC = () => {
               alt="How we work process"
               width={672}
               height={421}
-              objectFit="cover"
+              className="w-full h-full object-cover"
             />
           </div>
           <div className="flex flex-col gap-4 md:gap-10">

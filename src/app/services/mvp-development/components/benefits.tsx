@@ -38,11 +38,11 @@ const Benefits: FC = () => {
           </div>
           <div>
             <Image
-              src="/images/nguyen-cyberk.png"
+              src="/images/our-vision-2.png"
               alt={content.title}
               width={583}
               height={414}
-              className="rounded-lg shadow-lg"
+              className="rounded-lg shadow-lg w-full h-full object-cover"
             />
           </div>
         </div>

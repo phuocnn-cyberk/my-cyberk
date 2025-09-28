@@ -24,7 +24,7 @@ const TypesOfSmartContracts: FC = () => {
               alt="Smart Contracts Icon"
               width={64}
               height={64}
-              className="mb-6 md:mb-15"
+              className="mb-6 md:mb-15 w-16 h-16"
             />
             <h2 className="text-2xl md:text-5xl text-[#212121] mb-4">
               Types of Smart Contracts

@@ -87,17 +87,20 @@ const benefits = [
   {
     icon: ShoppingBagIcon,
     title: "Low Initial Cost & Risk",
-    description: null,
+    description:
+      "Avoid large upfront investments—validate your idea before scaling.",
   },
   {
     icon: SparklesIcon,
     title: "Data-Driven Validation",
-    description: null,
+    description:
+      "Use real performance data to decide what features to build next, instead of guessing.",
   },
   {
     icon: LayoutIcon,
     title: "Solid Foundation",
-    description: null,
+    description:
+      "The MVP agent is built with best practices, making it easy to expand into a full-featured system later.",
   },
 ];
 
@@ -148,8 +151,8 @@ const WhyStartWithMvpAgent: FC = () => {
               src="/images/mvp-agent.png"
               alt="Why Start with an MVP Agent?"
               width={567}
-              height={433}
-              className="rounded-lg"
+              height={369}
+              className="rounded-lg w-full h-full md:w-[520px] md:h-[369px] object-cover"
             />
           </div>
         </div>

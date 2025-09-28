@@ -8,7 +8,6 @@ const TEAM_IMAGES = [
   "/images/brian-cyberk.png",
 ];
 
-// Duplicate the array for a seamless loop
 const SCROLLING_IMAGES = [...TEAM_IMAGES, ...TEAM_IMAGES];
 
 export const OurTeamSection: FC = () => {
@@ -23,12 +22,13 @@ export const OurTeamSection: FC = () => {
         <div className="flex animate-marquee">
           {SCROLLING_IMAGES.map((src, index) => (
             <div key={index} className="flex-shrink-0 mx-1 md:mx-4">
-              <div className="relative w-[207px] h-[136px] md:w-[400px] md:h-[300px] rounded-lg overflow-hidden">
+              <div className="relative w-[207px] h-[136px] md:w-[488px] md:h-[320px] rounded-lg overflow-hidden">
                 <Image
                   src={src}
                   alt={`Our team member ${index + 1}`}
-                  layout="fill"
-                  objectFit="cover"
+                  width={488}
+                  height={320}
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>

@@ -25,7 +25,7 @@ export const ImageWithListSection: FC<ImageWithListSectionProps> = ({
         alt={imageAlt}
         width={567}
         height={433}
-        className="rounded-lg shadow-lg"
+        className="rounded-lg shadow-lg w-full h-full object-cover"
       />
     </div>
   );

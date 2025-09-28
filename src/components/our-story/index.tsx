@@ -12,13 +12,13 @@ export const OurStorySection: FC = () => {
         <div className="max-w-[1090px] mx-auto">
           <Card className="shadow-xl rounded-2xl border-none p-0">
             <CardContent className="p-0 flex flex-wrap lg:flex-nowrap gap-6">
-              <div className="relative w-full h-63 lg:h-auto rounded-t-2xl lg:rounded-l-2xl lg:rounded-t-none lg:w-[520px] flex-shrink-0 shadow-[0px_4px_4px_0px_#00000040]">
+              <div className="relative w-full h-63 lg:h-[392px] rounded-t-2xl lg:rounded-l-2xl lg:rounded-t-none lg:w-[520px] flex-shrink-0 shadow-[0px_4px_4px_0px_#00000040]">
                 <Image
                   src="/images/cyberk-collective.png"
                   alt="Cyberk team collective"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-t-2xl lg:rounded-l-2xl lg:rounded-t-none"
+                  width={520}
+                  height={392}
+                  className="rounded-t-2xl lg:rounded-l-2xl lg:rounded-t-none w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,white_0%,rgba(255,255,255,0)_45.32%)] rounded-t-2xl lg:rounded-l-2xl lg:rounded-t-none" />
                 <div className="absolute top-6 inset-0 flex items-start justify-center">
@@ -27,10 +27,11 @@ export const OurStorySection: FC = () => {
                     alt="Cyberk Logo"
                     width={216}
                     height={40}
+                    className="w-[216px] h-10 object-cover"
                   />
                 </div>
               </div>
-              <div className="p-6 max-md:pt-0 space-y-4 text-base text-[#212121] leading-relaxed rounded-b-2xl lg:rounded-b-none">
+              <div className="p-6 max-md:pt-0 space-y-4 text-base text-[#212121] leading-[24px] rounded-b-2xl lg:rounded-b-none">
                 <p>
                   Before starting Cyberk, Jon and Anderson were founders chasing
                   their own startup dreams. They had the vision, but they hit

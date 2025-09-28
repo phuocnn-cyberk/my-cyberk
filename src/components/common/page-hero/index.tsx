@@ -48,8 +48,9 @@ export const PageHero: FC<PageHeroProps> = ({
             <Image
               src={image.src}
               alt={image.alt}
-              layout="fill"
-              objectFit="cover"
+              width={340}
+              height={380}
+              className="w-full h-full object-cover"
             />
           </div>
         </div>

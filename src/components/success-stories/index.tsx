@@ -54,14 +54,14 @@ interface StoryCardProps {
 
 const StoryCard: FC<StoryCardProps> = ({ story }) => (
   <Card className="bg-[#F6FAFF] border-none pb-0 rounded-2xl overflow-hidden">
-    <CardContent className="text-center">
+    <CardContent className="text-center pt-6">
       <div className="relative h-8 mb-4">
         <Image
           src={`/${story.logo}`}
           alt={`${story.logo} logo`}
-          layout="fill"
-          objectFit="contain"
-          objectPosition="center"
+          width={347}
+          height={240}
+          className="w-full h-full object-contain"
         />
       </div>
       <p className="text-xl text-black mb-2">{story.metric}</p>
@@ -74,8 +74,9 @@ const StoryCard: FC<StoryCardProps> = ({ story }) => (
       <Image
         src={story.image}
         alt={`${story.logo} success story`}
-        layout="fill"
-        objectFit="cover"
+        width={347}
+        height={240}
+        className="w-full h-full object-cover"
       />
     </div>
   </Card>
