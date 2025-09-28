@@ -12,7 +12,7 @@ const PROCESS_STEPS = [
   },
   {
     label: "Solution Design",
-    image: "/images/meeting-image.png",
+    image: "/images/solution-design.png",
   },
   {
     label: "Agile Development",
