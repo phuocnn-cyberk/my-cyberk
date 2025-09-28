@@ -47,10 +47,10 @@ export const useFadeInStagger = ({
             opacity: 1,
             y: 0,
             filter: "blur(0px)",
-            duration: 0.8,
-            stagger: 0.1,
+            duration: 0.6,
+            stagger: 0.07,
           },
-          0.3
+          0.2
         );
       }
 
@@ -67,8 +67,8 @@ export const useFadeInStagger = ({
             opacity: 1,
             y: 0,
             filter: "blur(0px)",
-            duration: 0.6,
-            stagger: 0.08,
+            duration: 0.5,
+            stagger: 0.06,
           },
           "-=0.3"
         );
@@ -80,7 +80,7 @@ export const useFadeInStagger = ({
           gsap.set(ctas, { opacity: 0, y: 16 });
           tl.to(
             ctas,
-            { opacity: 1, y: 0, duration: 0.6, stagger: 0.08 },
+            { opacity: 1, y: 0, duration: 0.5, stagger: 0.06 },
             "-=0.2"
           );
         }
