@@ -81,11 +81,11 @@ interface StatItemProps {
 }
 
 const StatItem: FC<StatItemProps> = ({ value, description }) => (
-  <div className="bg-[#F6FAFF] p-8 text-center rounded-lg">
+  <div className="bg-[#F6FAFF] py-5 md:p-8 text-center rounded-lg">
     <p className="text-xl md:text-[40px] font-bold text-[#2172E6] mb-2">
       {value}
     </p>
-    <p className="text-sm md:text-lg leading-tight text-[#212121] whitespace-pre-line">
+    <p className="text-xs md:text-lg leading-tight text-[#212121] whitespace-pre-line">
       {description}
     </p>
   </div>
@@ -288,8 +288,8 @@ export default function InfiniteHero() {
 
       <div className="pointer-events-none absolute inset-0 [background:radial-gradient(120%_80%_at_50%_50%,_transparent_40%,_white_100%)]" />
 
-      <div className="relative z-10 flex h-svh w-full flex-col lg:items-center lg:justify-center lg:flex-row px-6">
-        <div className="flex-1 flex items-center justify-center">
+      <div className="relative z-10 flex h-svh w-full flex-col lg:items-center lg:justify-center lg:flex-row px-5">
+        <div className="flex-1 flex items-center justify-center lg:pb-48">
           <div className="text-center">
             <h1
               ref={h1Ref}
