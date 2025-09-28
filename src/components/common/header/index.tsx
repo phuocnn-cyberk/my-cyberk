@@ -217,7 +217,7 @@ export const Header: FC = () => {
                     </DesktopMenuItem>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="bg-white rounded-xl shadow-lg border-none mt-2 w-56">
-                    {item.subItems.map((subItem, index) => (
+                    {item.subItems.map((subItem) => (
                       <DropdownMenuItem
                         key={subItem.label}
                         asChild
