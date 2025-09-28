@@ -8,7 +8,7 @@ import { useFadeInStagger } from "@/lib/animations";
 const PROCESS_STEPS = [
   {
     label: "Discovery & Analysis",
-    image: "/images/meeting.png",
+    image: "/images/discovery-analysis.png",
   },
   {
     label: "Solution Design",
@@ -16,19 +16,19 @@ const PROCESS_STEPS = [
   },
   {
     label: "Agile Development",
-    image: "/images/how-we-work.png",
+    image: "/images/agile.png",
   },
   {
     label: "Quality Assurance",
-    image: "/images/meeting-image.png",
+    image: "/images/qa.png",
   },
   {
     label: "Launch & Hypercare",
-    image: "/images/how-we-work.png",
+    image: "/images/launch-hypercare.png",
   },
   {
     label: "Discovery & Warranty & Ongoing Support",
-    image: "/images/meeting-image.png",
+    image: "/images/discovery.png",
   },
 ];
 
