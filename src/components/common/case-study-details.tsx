@@ -32,14 +32,14 @@ export const CaseStudyDetails: FC<CaseStudyDetailsProps> = ({
         <div className="max-w-[883px] mx-auto space-y-10 md:space-y-16">
           {initialSections.map((section, index) => (
             <div key={index}>
-              <h2 className="text-2xl md:text-[36px] font-semibold mb-3 md:mb-4 text-[#212121]">
+              <h2 className="text-2xl md:text-[36px] font-medium mb-3 md:mb-4 text-[#212121]">
                 {section.title}
               </h2>
               <div className="space-y-4">
                 {section.description.map((paragraph, pIndex) => (
                   <p
                     key={pIndex}
-                    className="text-sm text-[#232325] md:text-xl leading-tight"
+                    className="text-sm text-[#232325] md:text-xl leading-tight font-light"
                   >
                     {paragraph}
                   </p>
@@ -58,14 +58,14 @@ export const CaseStudyDetails: FC<CaseStudyDetailsProps> = ({
         <div className="max-w-[883px] mx-auto">
           {finalSections.map((section, index) => (
             <div key={index}>
-              <h2 className="text-2xl md:text-[36px] font-semibold mb-3 md:mb-4 text-[#212121]">
+              <h2 className="text-2xl md:text-[36px] font-medium mb-3 md:mb-4 text-[#212121]">
                 {section.title}
               </h2>
               <div className="space-y-4">
                 {section.description.map((paragraph, pIndex) => (
                   <p
                     key={pIndex}
-                    className="text-sm text-[#232325] md:text-xl leading-tight"
+                    className="text-sm text-[#232325] md:text-xl leading-tight font-light"
                   >
                     {paragraph}
                   </p>

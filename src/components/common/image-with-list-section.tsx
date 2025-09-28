@@ -64,7 +64,7 @@ export const ImageWithListSection: FC<ImageWithListSectionProps> = ({
         <div className="space-y-5 md:space-y-8">
           {sections.map((section) => (
             <div key={section.title}>
-              <h3 className="mb-2 text-lg md:text-xl font-semibold text-[#212121]">
+              <h3 className="mb-2 text-lg md:text-xl font-medium text-[#212121]">
                 {section.title}
               </h3>
               <ul className="space-y-2 md:space-y-3">

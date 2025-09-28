@@ -21,7 +21,7 @@ export const HeroSection: FC = () => {
           </span>
         </div>
 
-        <h1 className="text-5xl text-[#000000] md:text-7xl font-semibold mb-6 max-w-4xl leading-tight">
+        <h1 className="text-5xl text-[#000000] md:text-7xl font-medium mb-6 max-w-4xl leading-tight">
           <span className="flex items-center justify-center gap-4">
             Fastest
             <Image src="/bolt.svg" alt="bolt" width={43} height={62} />

@@ -62,7 +62,7 @@ export const FaqSection: FC = () => {
               className="border-b border-black/10"
             >
               <AccordionTrigger className="text-base md:text-2xl py-5 md:py-10 font-extralight hover:no-underline text-black">
-                <span className="text-[#2684FF] font-semibold text-base md:text-2xl">
+                <span className="text-[#2684FF] font-medium text-base md:text-2xl">
                   {faq.id}
                 </span>
                 {faq.question}

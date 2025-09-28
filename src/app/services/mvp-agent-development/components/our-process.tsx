@@ -69,7 +69,7 @@ const OurProcess: FC = () => {
                         </p>
                       )}
                     </div>
-                    <div className="text-2xl font-semibold text-[#2684FF] md:text-[40px]">
+                    <div className="text-2xl font-medium text-[#2684FF] md:text-[40px]">
                       {String(index + 1).padStart(2, "0")}
                     </div>
                   </div>

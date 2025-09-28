@@ -49,8 +49,7 @@ const Achievements: FC = () => {
               Achievements
             </h2>
             <p className="text-[#212121] mb-8 text-xl">
-              <span className="font-semibold">What We Have Achieved:</span>{" "}
-              <br />
+              <span className="font-medium">What We Have Achieved:</span> <br />
               <span className="font-extralight">
                 $40M+ TVL in deployed contracts
               </span>
@@ -72,7 +71,7 @@ const Achievements: FC = () => {
           </h2>
           <div className="mx-auto max-w-[303px] rounded-lg bg-white p-8 text-center shadow-[0px_10px_40px_0px_rgba(0,0,0,0.1)]">
             <p className="text-xl text-[#212121]">What We’ve Achieved</p>
-            <p className="my-6 text-5xl font-semibold text-[#2684FF]">$40M+</p>
+            <p className="my-6 text-5xl font-medium text-[#2684FF]">$40M+</p>
             <p className="text-xl text-[#212121] font-extralight">
               TVL in deployed contracts
             </p>

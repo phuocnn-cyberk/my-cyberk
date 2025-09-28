@@ -26,7 +26,7 @@ interface StatItemProps {
 
 const StatItem: FC<StatItemProps> = ({ value, description }) => (
   <div className="text-center">
-    <p className="text-xl md:text-5xl font-semibold text-[#2172E6] mb-2">
+    <p className="text-xl md:text-5xl font-medium text-[#2172E6] mb-2">
       {value}
     </p>
     <p className="text-sm md:text-lg leading-tight text-[#212121] whitespace-pre-line">

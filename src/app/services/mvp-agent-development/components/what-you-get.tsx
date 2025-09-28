@@ -94,7 +94,7 @@ const WhatYouGet: FC = () => {
                     />
                     <div className="flex-1">
                       <h3
-                        className={`text-base md:text-lg font-semibold mb-3 md:mb-4 transition-colors text-[#212121] duration-300`}
+                        className={`text-base md:text-lg font-medium mb-3 md:mb-4 transition-colors text-[#212121] duration-300`}
                       >
                         {feature.title}
                       </h3>
