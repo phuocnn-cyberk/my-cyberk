@@ -77,9 +77,9 @@ const AethirPage: FC = () => {
               increases scalability, and eliminates the centralization risks of
               traditional cloud services.
             </p>
-            <Link href="#" target="_blank">
+            <Link href="https://dashboard.aethir.com" target="_blank">
               <Button className="h-11 !px-6 text-sm md:text-base font-extralight group bg-[#2684FF] hover:text-black btn-discover">
-                Visit website
+                <span className="font-light">Visit website</span>
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
             </Link>

@@ -71,9 +71,9 @@ const OraclerPage: FC = () => {
               data to smart contracts on the blockchain, ensuring authenticity
               and transparency for DeFi, GameFi, and other applications.
             </p>
-            <Link href="#" target="_blank">
+            <Link href="https://www.oracler.co" target="_blank">
               <Button className="h-11 !px-6 text-sm md:text-base font-extralight group bg-[#2684FF] hover:text-black btn-discover">
-                Visit website
+                <span className="font-light">Visit website</span>
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
             </Link>

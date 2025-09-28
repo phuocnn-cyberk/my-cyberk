@@ -73,9 +73,9 @@ const CoinseekerPage: FC = () => {
               users discover new investment opportunities, track market trends,
               and manage digital asset portfolios intelligently.
             </p>
-            <Link href="#" target="_blank">
+            <Link href="https://coinseeker.co" target="_blank">
               <Button className="h-11 !px-6 text-sm md:text-base font-extralight group bg-[#2684FF] hover:text-black btn-discover">
-                Visit website
+                <span className="font-light">Visit website</span>
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
             </Link>
