@@ -94,8 +94,8 @@ export const Footer: FC = () => {
           </div>
           <div className="lg:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-12">
             <FooterLinkColumn title="COMPANY" links={FOOTER_LINKS.COMPANY} />
-            <FooterLinkColumn title="SERVICES" links={FOOTER_LINKS.SERVICES} />
             <FooterLinkColumn title="CONTACT" links={FOOTER_LINKS.CONTACT} />
+            <FooterLinkColumn title="SERVICES" links={FOOTER_LINKS.SERVICES} />
           </div>
         </div>
         <div className="flex flex-col gap-y-4 text-center sm:text-left sm:flex-row justify-between items-center pt-14 md:pt-25 pb-5 text-sm text-black/50">

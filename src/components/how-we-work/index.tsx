@@ -1,20 +1,62 @@
 "use client";
 
-import { FC, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const PROCESS_STEPS = [
-  "Discovery & Analysis",
-  "Solution Design",
-  "Agile Development",
-  "Quality Assurance",
-  "Launch & Hypercare",
-  "Discovery & Warranty & Ongoing Support",
+  {
+    label: "Discovery & Analysis",
+    image: "/images/meeting.png",
+  },
+  {
+    label: "Solution Design",
+    image: "/images/meeting-image.png",
+  },
+  {
+    label: "Agile Development",
+    image: "/images/how-we-work.png",
+  },
+  {
+    label: "Quality Assurance",
+    image: "/images/meeting-image.png",
+  },
+  {
+    label: "Launch & Hypercare",
+    image: "/images/how-we-work.png",
+  },
+  {
+    label: "Discovery & Warranty & Ongoing Support",
+    image: "/images/meeting-image.png",
+  },
 ];
 
 export const HowWeWorkSection: FC = () => {
-  const [activeStep, setActiveStep] = useState(PROCESS_STEPS[0]);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+
+  const startTimer = () => {
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+    }
+    timerRef.current = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % PROCESS_STEPS.length);
+    }, 3000);
+  };
+
+  useEffect(() => {
+    startTimer();
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+    };
+  }, []);
+
+  const handleStepClick = (index: number) => {
+    setActiveIndex(index);
+    startTimer();
+  };
 
   return (
     <section className="bg-white py-24">
@@ -31,26 +73,33 @@ export const HowWeWorkSection: FC = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="relative rounded-2xl overflow-hidden">
-            <Image
-              src="/images/how-we-work.png"
-              alt="How we work process"
-              width={672}
-              height={421}
-              className="w-full h-full object-cover"
-            />
+          <div className="relative rounded-2xl overflow-hidden aspect-[672/421]">
+            {PROCESS_STEPS.map((step, index) => (
+              <Image
+                key={step.label}
+                src={step.image}
+                alt="How we work process"
+                width={672}
+                height={421}
+                className={cn(
+                  "absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out",
+                  activeIndex === index ? "opacity-100" : "opacity-0"
+                )}
+                priority={index === 0}
+              />
+            ))}
           </div>
           <div className="flex flex-col gap-4 md:gap-10">
-            {PROCESS_STEPS.map((step) => {
-              const isActive = activeStep === step;
+            {PROCESS_STEPS.map((step, index) => {
+              const isActive = activeIndex === index;
               return (
                 <div
-                  key={step}
+                  key={step.label}
                   className={cn(
                     "flex items-center gap-4 cursor-pointer leading-tight group",
                     isActive ? "text-[#2684FF]" : "text-[#212121]"
                   )}
-                  onClick={() => setActiveStep(step)}
+                  onClick={() => handleStepClick(index)}
                 >
                   <div
                     className={cn(
@@ -65,7 +114,7 @@ export const HowWeWorkSection: FC = () => {
                       "text-sm md:text-lg transition-colors font-medium"
                     )}
                   >
-                    {step}
+                    {step.label}
                   </p>
                 </div>
               );
