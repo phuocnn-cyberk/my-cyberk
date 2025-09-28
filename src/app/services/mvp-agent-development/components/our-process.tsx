@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import { ContainerScroll, CardSticky } from "@/components/ui/cards-stack";
 
 const processData = {
   eyebrow: "Our Process",
@@ -8,18 +8,28 @@ const processData = {
     "Our journey begins with a deep dive into your vision. We deliver MVPs in less than 30 days, combining speed with quality and security.",
   steps: [
     {
+      id: "step-1",
       title: "MVP Definition Workshop",
-      description: null,
+      description:
+        "We work with you to define the agent’s core task, title, and domain. This ensures we’re solving the right problem from the start.",
     },
     {
+      id: "step-2",
       title: "Rapid & Transparent Development",
       description:
         "Our team focuses on building the core feature with speed and quality. You’ll get regular demos and updates as the agent takes shape.",
     },
     {
+      id: "step-3",
       title: "Controlled Deployment",
       description:
         "We deploy the agent in a test environment, using real data to measure performance and gather feedback.",
+    },
+    {
+      id: "step-4",
+      title: "Review & Roadmap",
+      description:
+        "Together, we analyze the MVP’s results and create a clear, data-driven roadmap for future development and upgrades.",
     },
   ],
 };
@@ -28,63 +38,44 @@ const OurProcess: FC = () => {
   return (
     <section className="bg-[#FAFAFA] py-15 md:py-20">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 items-start gap-10 md:gap-18 md:grid-cols-12">
+        <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-12 md:gap-18 md:h-[892px]">
           <div className="md:col-span-6">
-            <p className="mb-6 text-base md:text-lg font-medium text-[#2684FF]">
+            <p className="mb-6 text-base font-medium text-[#2684FF] md:text-lg">
               {processData.eyebrow}
             </p>
-            <h2 className="mb-6 text-2xl md:text-5xl font-medium text-[#212121] leading-tight">
+            <h2 className="mb-6 text-2xl font-medium leading-tight text-[#212121] md:text-5xl">
               {processData.title}
             </h2>
-            <p className="text-sm md:text-base text-[#212121]">
+            <p className="text-sm text-[#212121] md:text-base">
               {processData.description}
             </p>
           </div>
-          <div className="md:col-span-6 space-y-6">
-            <Card className="rounded-2xl shadow-lg border-none">
-              <CardContent className="p-0 pt-10">
-                <div className="flex justify-between items-start px-6">
-                  <h3 className="text-base md:text-xl font-medium text-[#212121]">
-                    {processData.steps[0].title}
-                  </h3>
-                  <div className="text-2xl md:text-[40px] font-semibold text-[#2684FF]">
-                    01
+          <div className="md:col-span-6 h-[500px] md:h-full overflow-y-auto">
+            <ContainerScroll className="space-y-6">
+              {processData.steps.map((step, index) => (
+                <CardSticky
+                  key={step.id}
+                  index={index}
+                  className="flex flex-col justify-center rounded-2xl border bg-white p-6 shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] md:h-[260px] md:w-[588px] md:p-8"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="max-w-[384px]">
+                      <h3 className="text-base font-medium text-[#212121] md:text-xl">
+                        {step.title}
+                      </h3>
+                      {step.description && (
+                        <p className="mt-3 text-xs text-[#232323] md:mt-6 md:text-base">
+                          {step.description}
+                        </p>
+                      )}
+                    </div>
+                    <div className="text-2xl font-semibold text-[#2684FF] md:text-[40px]">
+                      {String(index + 1).padStart(2, "0")}
+                    </div>
                   </div>
-                </div>
-                <div className="flex justify-between items-start overflow-hidden rounded-2xl pt-6 px-6 min-h-[180px] md:min-h-[240px] shadow-[0px_4px_4px_0px_#3535351a,4px_0px_4px_0px_#0000001a] backdrop-blur-[20px]">
-                  <div>
-                    <h3 className="text-base md:text-xl font-medium text-[#212121] max-w-[180px] md:max-w-[300px]">
-                      {processData.steps[1].title}
-                    </h3>
-                    {processData.steps[1].description && (
-                      <p className=" mt-3 md:mt-6 text-xs md:text-base text-[#232323] max-w-[384px]">
-                        {processData.steps[1].description}
-                      </p>
-                    )}
-                  </div>
-                  <div className="text-2xl md:text-[40px] font-semibold text-[#2684FF]">
-                    02
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="rounded-2xl shadow-lg border-none">
-              <CardContent className="p-6 flex justify-between items-start min-h-[180px] md:min-h-[300px]">
-                <div>
-                  <h3 className="text-base md:text-xl font-medium text-[#212121]">
-                    {processData.steps[2].title}
-                  </h3>
-                  {processData.steps[2].description && (
-                    <p className="mt-2 text-xs md:text-base text-[#232323] max-w-[384px]">
-                      {processData.steps[2].description}
-                    </p>
-                  )}
-                </div>
-                <div className="text-2xl md:text-[40px] font-semibold text-[#2684FF]">
-                  03
-                </div>
-              </CardContent>
-            </Card>
+                </CardSticky>
+              ))}
+            </ContainerScroll>
           </div>
         </div>
       </div>
