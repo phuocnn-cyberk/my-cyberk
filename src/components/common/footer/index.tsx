@@ -6,21 +6,24 @@ import { ContactButton } from "../contact-button";
 
 const FOOTER_LINKS = {
   COMPANY: [
-    { label: "About us", href: "#" },
+    { label: "About us", href: "/about-us" },
     { label: "Service", href: "#" },
     { label: "Portfolio", href: "#" },
     { label: "Blog", href: "#" },
   ],
   SERVICES: [
-    { label: "MVP Development", href: "#" },
-    { label: "Smart Contract Development", href: "#" },
-    { label: "Dedicated Lab", href: "#" },
-    { label: "MVP Agent Development", href: "#" },
+    { label: "MVP Development", href: "/services/mvp-development" },
+    {
+      label: "Smart Contract Development",
+      href: "/services/smart-contract-development",
+    },
+    { label: "Dedicated Lab", href: "/services/dedicated-lab" },
+    { label: "MVP Agent Development", href: "/services/mvp-agent-development" },
   ],
   CONTACT: [
     { label: "Linkedin", href: "#" },
     { label: "Facebook", href: "#" },
-    { label: "Telegram", href: "#" },
+    { label: "Telegram", href: "https://t.me/cyberk_anderson" },
     { label: "Hello@cyberk.io", href: "mailto:Hello@cyberk.io" },
   ],
 };
@@ -63,6 +66,7 @@ const FooterLinkColumn: FC<{
         <li key={link.label}>
           <Link
             href={link.href}
+            target={link.href.includes("https") ? "_blank" : "_self"}
             className="text-[#717070] whitespace-nowrap hover:text-black cursor-pointer"
           >
             {link.label}
@@ -90,8 +94,8 @@ export const Footer: FC = () => {
           </div>
           <div className="lg:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-12">
             <FooterLinkColumn title="COMPANY" links={FOOTER_LINKS.COMPANY} />
-            <FooterLinkColumn title="CONTACT" links={FOOTER_LINKS.CONTACT} />
             <FooterLinkColumn title="SERVICES" links={FOOTER_LINKS.SERVICES} />
+            <FooterLinkColumn title="CONTACT" links={FOOTER_LINKS.CONTACT} />
           </div>
         </div>
         <div className="flex flex-col gap-y-4 text-center sm:text-left sm:flex-row justify-between items-center pt-14 md:pt-25 pb-5 text-sm text-black/50">
