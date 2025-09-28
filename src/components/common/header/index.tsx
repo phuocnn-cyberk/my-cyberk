@@ -227,7 +227,7 @@ export const Header: FC = () => {
                           href={subItem.path}
                           className={cn(
                             "cursor-pointer text-sm text-[#4B4B4B] hover:text-black whitespace-nowrap font-light w-full px-4 py-2 block",
-                            index === 0 && "!text-[#2684FF]"
+                            pathname === subItem.path && "!text-[#2684FF]"
                           )}
                         >
                           {subItem.label}
