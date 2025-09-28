@@ -39,7 +39,7 @@ const CoinseekerPage: FC = () => {
         ],
       },
     ],
-    detailsImage: "/images/coinseeker-image-2.png",
+    detailsImage: "/images/coinseeker.png",
     finalSections: [
       {
         title: "Results & Achievements",

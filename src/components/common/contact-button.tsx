@@ -14,7 +14,11 @@ export const ContactButton: FC<ContactButtonProps> = ({
   className,
 }) => {
   return (
-    <Link href="https://t.me/cyberk_anderson" target="_blank">
+    <Link
+      href="https://t.me/cyberk_anderson"
+      target="_blank"
+      className="inline-block"
+    >
       <Button
         className={cn(
           "bg-[#2172E6] text-white text-sm font-normal btn-discover hover:text-black hover:bg-[#2172E6]/90 flex items-center gap-2",

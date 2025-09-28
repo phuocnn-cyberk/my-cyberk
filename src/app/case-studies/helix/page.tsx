@@ -39,7 +39,7 @@ const HelixPage: FC = () => {
         ],
       },
     ],
-    detailsImage: "/images/helix-image-2.png",
+    detailsImage: "/images/helix.png",
     finalSections: [
       {
         title: "Results & Achievements",

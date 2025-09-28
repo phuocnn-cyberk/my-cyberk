@@ -53,7 +53,7 @@ export const CaseStudyDetails: FC<CaseStudyDetailsProps> = ({
           alt="Case Study Details Image"
           width={910}
           height={523}
-          className="block w-full max-w-[910px] h-auto mx-auto my-9 rounded-2xl"
+          className="block w-full max-w-[910px] h-auto mx-auto my-9 rounded-2xl overflow-hidden"
         />
         <div className="max-w-[883px] mx-auto">
           {finalSections.map((section, index) => (

@@ -19,7 +19,7 @@ const features = [
     title: "Performance Report",
     description:
       "Clear, actionable metrics showing the agent’s value and impact.",
-    image: "/images/kate-cyberk.png",
+    image: "/images/trung-cyberk.png",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const features = [
     title: "Development Roadmap",
     description:
       "A step-by-step plan for expanding and upgrading your agent, based on real-world data.",
-    image: "/images/felix-cyberk.png",
+    image: "/images/manh-cyberk.png",
   },
 ];
 

@@ -25,7 +25,7 @@ const SERVICE_SUB_ITEMS = [
     label: "Smart Contract Development",
     path: "/services/smart-contract-development",
   },
-  { label: "Dedicated Lab", path: "#" },
+  { label: "Dedicated Lab", path: "/services/dedicated-lab" },
   { label: "MVP Agent Development", path: "/services/mvp-agent-development" },
 ];
 
