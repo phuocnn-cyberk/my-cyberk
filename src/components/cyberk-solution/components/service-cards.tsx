@@ -1,3 +1,5 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { FC } from "react";
@@ -49,7 +51,7 @@ export const ServiceCards: FC = () => {
                 {service.description}
               </p>
               <div className="mt-auto pt-6">
-                <div className="inline-flex items-center gap-x-2 rounded-lg bg-[#2684FF] px-4 py-2 text-sm font-normal text-white transition-all duration-300 hover:bg-[#2684FF]/90 md:invisible md:opacity-0 group-hover:visible group-hover:opacity-100">
+                <div className="inline-flex w-fit items-center gap-x-2 rounded-lg bg-[#2684FF] btn-discover px-4 py-2 text-sm font-normal text-white transition-all duration-300 hover:text-black hover:bg-[#2684FF]/90 md:invisible md:opacity-0 group-hover:visible group-hover:opacity-100">
                   <span>Learn More</span>
                   <ArrowRight size={12} />
                 </div>
