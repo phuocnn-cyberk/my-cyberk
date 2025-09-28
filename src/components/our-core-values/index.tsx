@@ -34,10 +34,10 @@ export const OurCoreValuesSection: FC = () => {
     <section className="py-15 md:py-24 bg-white">
       <div className="container mx-auto px-5">
         <div className="text-center max-w-4xl mx-auto mb-6 md:mb-15">
-          <h2 className="text-2xl md:text-5xl font-medium text-black mb-4 md:mb-6">
+          <h2 className="text-2xl md:text-5xl font-normal text-black mb-4 md:mb-6">
             Our Core Values
           </h2>
-          <p className="text-sm md:text-xl font-light text-[#212121]">
+          <p className="text-sm md:text-xl font-extralight text-[#212121]">
             At Cyberk, our Web3 expertise is guided by curiosity, courage,
             integrity, dedication, and craftsmanship - helping startups launch
             faster and achieve lasting success.
@@ -51,10 +51,10 @@ export const OurCoreValuesSection: FC = () => {
                 key={value.title}
                 className="grid md:grid-cols-3 gap-3 md:gap-6 items-start max-md:py-3"
               >
-                <h3 className="col-span-1 text-base md:text-xl font-medium text-[#2684FF]">
+                <h3 className="col-span-1 text-base md:text-xl font-normal text-[#2684FF]">
                   {value.title}
                 </h3>
-                <p className="col-span-2 text-xs md:text-xl font-light text-[#212121]">
+                <p className="col-span-2 text-xs md:text-xl font-extralight text-[#212121]">
                   {value.description}
                 </p>
               </div>

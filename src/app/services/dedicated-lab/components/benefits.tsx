@@ -7,29 +7,29 @@ const Benefits: FC = () => {
       <div className="container mx-auto px-5">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           <div>
-            <h2 className="text-2xl md:text-4xl text-left md:text-center font-medium text-[#212121] mb-6 md:mb-10">
+            <h2 className="text-2xl md:text-4xl text-left md:text-center font-normal text-[#212121] mb-6 md:mb-10">
               Goals & Benefits
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-6">
               <div className="p-4 md:p-6 bg-[#F6FAFF] rounded-lg">
-                <p className="text-[#4B4B4B] text-base font-light">
+                <p className="text-[#4B4B4B] text-base font-extralight">
                   Ensure stability in developing and operating products with
                   real users.
                 </p>
               </div>
               <div className="p-4 md:p-6 bg-[#F6FAFF] rounded-lg">
-                <p className="text-[#4B4B4B] text-base font-light">
+                <p className="text-[#4B4B4B] text-base font-extralight">
                   A dedicated team deeply understands your product and company
                   culture.
                 </p>
               </div>
               <div className="p-4 md:p-6 bg-[#F6FAFF] rounded-lg">
-                <p className="text-[#4B4B4B] text-base font-light">
+                <p className="text-[#4B4B4B] text-base font-extralight">
                   Flexibly scale the team up or down as needed.
                 </p>
               </div>
               <div className="p-4 md:p-6 bg-[#F6FAFF] rounded-lg">
-                <p className="text-[#4B4B4B] text-base font-light">
+                <p className="text-[#4B4B4B] text-base font-extralight">
                   Optimize costs, reduce risks in staffing and technology.
                 </p>
               </div>

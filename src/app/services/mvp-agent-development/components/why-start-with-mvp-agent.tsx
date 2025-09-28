@@ -109,7 +109,7 @@ const WhyStartWithMvpAgent: FC = () => {
     <section className="bg-white py-15 md:py-20">
       <div className="container mx-auto px-5">
         <div className="text-center mb-6 md:mb-16">
-          <h2 className="text-2xl md:text-5xl font-medium text-[#212121]">
+          <h2 className="text-2xl md:text-5xl font-normal text-[#212121]">
             Why Start with an MVP Agent?
           </h2>
         </div>
@@ -130,7 +130,7 @@ const WhyStartWithMvpAgent: FC = () => {
                   <AccordionTrigger className="p-0 hover:no-underline group">
                     <div className="flex items-start text-left">
                       <benefit.icon className="h-5 md:h-6 w-5 md:w-6 text-[#2684FF] mr-2 md:mr-4 flex-shrink-0" />
-                      <h3 className="text-sm md:text-lg font-medium text-[#212121] group-data-[state=open]:text-[#2684FF]">
+                      <h3 className="text-sm md:text-lg font-normal text-[#212121] group-data-[state=open]:text-[#2684FF]">
                         {benefit.title}
                       </h3>
                     </div>

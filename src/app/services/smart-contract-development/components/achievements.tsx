@@ -51,12 +51,12 @@ const Achievements: FC = () => {
             <p className="text-[#212121] mb-8 text-xl">
               <span className="font-semibold">What We Have Achieved:</span>{" "}
               <br />
-              <span className="font-light">
+              <span className="font-extralight">
                 $40M+ TVL in deployed contracts
               </span>
             </p>
             <div className="flex items-end space-x-5">
-              <div className="h-[178px] text-[178px] font-medium leading-tight text-[#2684FF] md:h-[240px] md:text-[240px]">
+              <div className="h-[178px] text-[178px] font-normal leading-tight text-[#2684FF] md:h-[240px] md:text-[240px]">
                 <Counter from={0} to={40} />
               </div>
               <span className="text-[32px] font-extralight text-[#212121]">
@@ -72,8 +72,8 @@ const Achievements: FC = () => {
           </h2>
           <div className="mx-auto max-w-[303px] rounded-lg bg-white p-8 text-center shadow-[0px_10px_40px_0px_rgba(0,0,0,0.1)]">
             <p className="text-xl text-[#212121]">What We’ve Achieved</p>
-            <p className="my-6 text-5xl font-bold text-[#2684FF]">$40M+</p>
-            <p className="text-xl text-[#212121] font-light">
+            <p className="my-6 text-5xl font-semibold text-[#2684FF]">$40M+</p>
+            <p className="text-xl text-[#212121] font-extralight">
               TVL in deployed contracts
             </p>
           </div>

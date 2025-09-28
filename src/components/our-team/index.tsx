@@ -14,7 +14,7 @@ export const OurTeamSection: FC = () => {
   return (
     <section className="bg-white py-15 md:py-24">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-2xl md:text-5xl leading-tight font-medium text-[#212121] mb-6 md:mb-16">
+        <h2 className="text-2xl md:text-5xl leading-tight font-normal text-[#212121] mb-6 md:mb-16">
           Our Team
         </h2>
       </div>

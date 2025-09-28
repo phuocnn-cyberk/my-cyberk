@@ -49,7 +49,7 @@ const ProcessStep = ({
       >
         {position === "bottom" && (
           <div className="text-left">
-            <h3 className="text-lg md:text-2xl font-normal text-[#212121]">
+            <h3 className="text-lg md:text-2xl font-extralight text-[#212121]">
               {title}
             </h3>
             <p className="mt-2 text-sm md:text-base text-[#212121] leading-tight max-w-[223px]">
@@ -68,7 +68,7 @@ const ProcessStep = ({
         </div>
         {position === "top" && (
           <div className="text-left">
-            <h3 className="text-lg md:text-2xl font-normal text-[#212121]">
+            <h3 className="text-lg md:text-2xl font-extralight text-[#212121]">
               {title}
             </h3>
             <p className="mt-2 text-sm md:text-base text-[#212121] leading-tight max-w-[223px]">
@@ -86,7 +86,7 @@ const OurProcess: FC = () => {
     <section className="py-15 md:py-24 bg-[#F9FCFF">
       <div className="container mx-auto px-4">
         <div className="text-center">
-          <h2 className="text-2xl md:text-5xl font-medium text-[#212121]">
+          <h2 className="text-2xl md:text-5xl font-normal text-[#212121]">
             {processData.title}
           </h2>
           <p className="mx-auto mt-3 md:mt-6 max-w-2xl text-sm md:text-base text-[#212121]">
@@ -140,7 +140,7 @@ const OurProcess: FC = () => {
               {index < processData.steps.length - 1 && (
                 <div className="absolute left-[9px] top-6 h-full w-px border-l border-dashed border-[#BEBEBE]"></div>
               )}
-              <h3 className="text-lg md:text-2xl font-normal text-[#212121]">
+              <h3 className="text-lg md:text-2xl font-extralight text-[#212121]">
                 {step.title}
               </h3>
               <p className="mt-2 text-sm md:text-base text-[#212121]">

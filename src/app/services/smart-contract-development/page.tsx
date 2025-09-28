@@ -14,25 +14,25 @@ const SmartContractDevelopmentPage: FC = () => {
         <div className="container mx-auto relative flex h-full items-center px-5">
           <div className="grid w-full grid-cols-1 items-center lg:grid-cols-12 gap-5 md:gap-0 max-md:mt-20">
             <div className="lg:col-span-6">
-              <h1 className="mb-4 md:mb-6 text-sm md:text-2xl font-bold text-[#2684FF]">
+              <h1 className="mb-4 md:mb-6 text-sm md:text-2xl font-semibold text-[#2684FF]">
                 Smart Contract Development
               </h1>
-              <h2 className="mb-2 md:mb-6 text-2xl md:text-5xl font-medium leading-tight">
+              <h2 className="mb-2 md:mb-6 text-2xl md:text-5xl font-normal leading-tight">
                 Get secure, reliable, and upgradable smart contracts for any
                 major blockchain.
               </h2>
-              <p className="leading-tight mb-2 md:mb-6 md:max-w-[550px] text-sm md:text-xl font-light">
+              <p className="leading-tight mb-2 md:mb-6 md:max-w-[550px] text-sm md:text-xl font-extralight">
                 We solve the complexity and risk of blockchain development by
                 providing expert consulting, design, and deployment.
               </p>
-              <p className="leading-tight mb-8 md:mb-10 md:max-w-[550px] text-sm md:text-xl font-light">
+              <p className="leading-tight mb-8 md:mb-10 md:max-w-[550px] text-sm md:text-xl font-extralight">
                 Our service ensures your contracts are safe, cost-effective, and
                 ready for real-world use—so you can focus on your product, not
                 technical pitfalls.
               </p>
               <ContactButton
                 text="CONTACT US"
-                className="h-11 !px-6 text-sm md:text-base font-normal"
+                className="h-11 !px-6 text-sm md:text-base font-extralight"
               />
             </div>
             <div className="flex justify-center lg:col-span-6">

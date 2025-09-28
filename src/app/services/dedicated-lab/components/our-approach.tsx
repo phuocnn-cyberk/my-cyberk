@@ -8,10 +8,10 @@ const OurApproach: FC = () => {
         <div className="max-w-[1200px] mx-auto">
           {/* Titles */}
           <div className="text-left lg:ml-[450px] lg:pr-16">
-            <p className="text-lg font-medium text-[#2684FF] mb-4">
+            <p className="text-lg font-normal text-[#2684FF] mb-4">
               Our Approach
             </p>
-            <h2 className="text-2xl md:text-[40px] font-medium text-[#212121] mb-8 lg:mb-12 leading-tight">
+            <h2 className="text-2xl md:text-[40px] font-normal text-[#212121] mb-8 lg:mb-12 leading-tight">
               The right team, built around your goals — proactive, seamless, and
               part of your journey
             </h2>
@@ -29,7 +29,7 @@ const OurApproach: FC = () => {
                   height={46}
                   className="mb-6"
                 />
-                <p className="text-base font-light text-[#4B4B4B]">
+                <p className="text-base font-extralight text-[#4B4B4B]">
                   Cyberk collaborates with clients to recruit, build, and manage
                   the most suitable team for your product goals. This team works
                   as an extension of your business, proactively proposing

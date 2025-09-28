@@ -68,7 +68,7 @@ const StoryCard: FC<StoryCardProps> = ({ story }) => (
         />
       </div>
       <p className="text-xl text-black mb-2">{story.metric}</p>
-      <p className="text-5xl font-medium text-[#2684FF] mb-4">{story.value}</p>
+      <p className="text-5xl font-normal text-[#2684FF] mb-4">{story.value}</p>
       <p className="text-base md:text-xl text-black/60 h-12">
         {story.description}
       </p>
@@ -104,13 +104,13 @@ export const SuccessStoriesSection: FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2
             ref={titleRef}
-            className="text-2xl md:text-5xl leading-tight font-medium text-[#212121] mb-4 md:mb-6"
+            className="text-2xl md:text-5xl leading-tight font-normal text-[#212121] mb-4 md:mb-6"
           >
             Success Stories
           </h2>
           <p
             ref={pRef}
-            className="text-sm md:text-xl font-normal leading-tight text-[#212121]"
+            className="text-sm md:text-xl font-extralight leading-tight text-[#212121]"
           >
             Find out how Cyberk performs for some of the world’s most dynamic
             businesses.

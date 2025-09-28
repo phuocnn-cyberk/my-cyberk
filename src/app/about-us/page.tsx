@@ -15,7 +15,7 @@ const AboutUsPage: FC = () => {
           heading="Fast, Reliable Blockchain Development Service"
           description="Discover Cyberk’s story — a Web3-focused tech studio built by founders, for founders. We deliver MVPs in under 30 days, helping startups launch blockchain products fast with trust, speed, and excellence."
           button={{
-            className: "h-9 px-8 text-base font-normal",
+            className: "h-9 px-8 text-base font-extralight",
           }}
           image={{
             src: "/images/felix-cyberk.png",

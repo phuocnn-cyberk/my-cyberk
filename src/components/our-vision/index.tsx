@@ -35,11 +35,11 @@ export const OurVisionSection: FC = () => {
       <div className="container mx-auto px-5">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-16 mb-5 md:mb-20">
           <div className="lg:col-span-1">
-            <h2 className="text-2xl md:text-5xl font-medium text-black mb-2 md:mb-16">
+            <h2 className="text-2xl md:text-5xl font-normal text-black mb-2 md:mb-16">
               Our Vision
             </h2>
             <div className="space-y-2 md:space-y-6">
-              <p className="text-sm md:text-2xl text-[#212121] font-normal">
+              <p className="text-sm md:text-2xl text-[#212121] font-extralight">
                 At Cyberk, our mission is simple:
               </p>
               <div className="bg-[#2684FF] text-white text-base md:text-xl inline-block px-1 py-2">
@@ -47,7 +47,7 @@ export const OurVisionSection: FC = () => {
               </div>
             </div>
           </div>
-          <div className="lg:col-span-2 space-y-6 text-base md:text-lg text-[#212121] font-light leading-relaxed">
+          <div className="lg:col-span-2 space-y-6 text-base md:text-lg text-[#212121] font-extralight leading-relaxed">
             <p>
               We exist to help founders and companies create real breakthroughs
               in Web3 and blockchain. In today’s VUCA world (volatility,

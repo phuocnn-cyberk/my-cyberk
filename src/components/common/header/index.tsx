@@ -74,7 +74,7 @@ const MobileSubMenu: FC<{
           onClick={() => setIsOpen(!isOpen)}
           className="flex cursor-pointer items-center justify-between rounded-lg bg-[#F6FAFF] p-3"
         >
-          <span className="text-sm font-medium text-[#212121]">
+          <span className="text-sm font-normal text-[#212121]">
             {item.label}
           </span>
           <ChevronDown
@@ -91,7 +91,7 @@ const MobileSubMenu: FC<{
                 href={subItem.path}
                 onClick={closeMenu}
                 className={cn(
-                  "w-full cursor-pointer text-xs font-light text-[#000] hover:text-black",
+                  "w-full cursor-pointer text-xs font-extralight text-[#000] hover:text-black",
                   pathname === subItem.path && "!text-[#2684FF]"
                 )}
               >
@@ -226,7 +226,7 @@ export const Header: FC = () => {
                         <Link
                           href={subItem.path}
                           className={cn(
-                            "cursor-pointer text-sm text-[#4B4B4B] hover:text-black whitespace-nowrap font-light w-full px-4 py-2 block",
+                            "cursor-pointer text-sm text-[#4B4B4B] hover:text-black whitespace-nowrap font-extralight w-full px-4 py-2 block",
                             pathname === subItem.path && "!text-[#2684FF]"
                           )}
                         >

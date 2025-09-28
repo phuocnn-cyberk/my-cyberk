@@ -26,7 +26,7 @@ const SERVICES_DATA = [
   {
     title: "MVP Agent Development",
     description:
-      "We dig deep to understand your goals, challenge assumptions, and test feasibility. If an idea doesn’t make sense, we’ll advise against building it.",
+      "Cyberk's MVP Agent Development service helps you quickly turn your idea of an 'Al employee' into a real, working product.",
     path: "/services/mvp-agent-development",
   },
 ];
@@ -43,15 +43,15 @@ export const ServiceCards: FC = () => {
           >
             <div className="flex h-full flex-col rounded-lg bg-white p-5 shadow-[0px_4px_4px_0px_#00000040] transition-all duration-300 lg:group-hover:-translate-y-10">
               <div className="h-5 md:h-[105px]">
-                <h3 className="text-lg font-medium text-[#212121] md:text-2xl">
+                <h3 className="text-lg font-normal text-[#212121] md:text-2xl">
                   {service.title}
                 </h3>
               </div>
-              <p className="mt-5 text-sm font-normal text-[#828282] md:text-base">
+              <p className="mt-5 text-sm font-extralight text-[#828282] md:text-base">
                 {service.description}
               </p>
               <div className="mt-auto pt-6">
-                <div className="inline-flex w-fit items-center gap-x-2 rounded-lg bg-[#2684FF] btn-discover px-4 py-2 text-sm font-normal text-white transition-all duration-300 hover:text-black hover:bg-[#2684FF]/90 md:invisible md:opacity-0 group-hover:visible group-hover:opacity-100">
+                <div className="inline-flex w-fit items-center gap-x-2 rounded-lg bg-[#2684FF] btn-discover px-4 py-2 text-sm font-extralight text-white transition-all duration-300 hover:text-black hover:bg-[#2684FF]/90 md:invisible md:opacity-0 group-hover:visible group-hover:opacity-100">
                   <span>Learn More</span>
                   <ArrowRight size={12} />
                 </div>

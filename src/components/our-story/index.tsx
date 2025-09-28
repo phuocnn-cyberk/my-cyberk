@@ -6,7 +6,7 @@ export const OurStorySection: FC = () => {
   return (
     <section className="bg-[#F6FAFF] py-15 md:py-24">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-5xl font-medium text-center text-black mb-6 md:mb-20">
+        <h2 className="text-2xl md:text-5xl font-normal text-center text-black mb-6 md:mb-20">
           Our Story
         </h2>
         <div className="max-w-[1090px] mx-auto">

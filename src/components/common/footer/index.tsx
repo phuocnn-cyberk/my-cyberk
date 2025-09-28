@@ -87,7 +87,7 @@ export const Footer: FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3">
           <div className="max-w-[373px] lg:col-span-1 mb-12 lg:mb-0">
             <div className="flex items-center justify-between lg:block">
-              <h2 className="text-2xl md:text-5xl font-medium text-[#2D2D2D] leading-tight lg:mb-8">
+              <h2 className="text-2xl md:text-5xl font-normal text-[#2D2D2D] leading-tight lg:mb-8">
                 Ready To
                 <br />
                 Get Started!

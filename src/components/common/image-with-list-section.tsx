@@ -39,11 +39,11 @@ export const ImageWithListSection: FC<ImageWithListSectionProps> = ({
 
   const textColumn = (
     <div>
-      <h2 className="mb-3 md:mb-6 text-2xl md:text-5xl font-medium text-[#212121]">
+      <h2 className="mb-3 md:mb-6 text-2xl md:text-5xl text-[#212121]">
         {title}
       </h2>
       {subtitle && (
-        <p className="mb-5 md:mb-8 text-sm md:text-xl text-[#212121]">
+        <p className="mb-5 md:mb-8 text-sm md:text-xl text-[#212121] font-extralight">
           {subtitle}
         </p>
       )}
@@ -52,7 +52,7 @@ export const ImageWithListSection: FC<ImageWithListSectionProps> = ({
           {items.map((item, index) => (
             <li
               key={index}
-              className="flex items-start text-sm md:text-xl text-[#5a5a5a]"
+              className="flex items-start text-sm md:text-xl text-[#212121] font-extralight"
             >
               <span className="mr-3 mt-2 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#212121]"></span>
               <span>{item}</span>
@@ -71,7 +71,7 @@ export const ImageWithListSection: FC<ImageWithListSectionProps> = ({
                 {section.items.map((item, index) => (
                   <li
                     key={index}
-                    className="flex items-start text-sm md:text-xl text-[#5a5a5a]"
+                    className="flex items-start text-sm md:text-xl text-[#212121] font-extralight"
                   >
                     <span className="mr-3 mt-2 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#212121]"></span>
                     <span>{item}</span>

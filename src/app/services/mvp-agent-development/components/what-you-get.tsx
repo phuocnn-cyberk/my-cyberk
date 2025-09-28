@@ -61,7 +61,7 @@ const WhatYouGet: FC = () => {
     <section className="bg-white py-15 md:py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-6 md:mb-16">
-          <h2 className="text-2xl md:text-5xl font-medium text-[#212121]">
+          <h2 className="text-2xl md:text-5xl font-normal text-[#212121]">
             What You Get
           </h2>
         </div>
@@ -94,7 +94,7 @@ const WhatYouGet: FC = () => {
                     />
                     <div className="flex-1">
                       <h3
-                        className={`text-base md:text-lg font-bold mb-3 md:mb-4 transition-colors text-[#212121] duration-300`}
+                        className={`text-base md:text-lg font-semibold mb-3 md:mb-4 transition-colors text-[#212121] duration-300`}
                       >
                         {feature.title}
                       </h3>

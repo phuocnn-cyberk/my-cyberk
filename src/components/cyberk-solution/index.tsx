@@ -26,13 +26,13 @@ export const CyberkSolutionSection: FC = () => {
         <div className="max-w-2xl mb-10 md:mb-16">
           <h2
             ref={titleRef}
-            className="text-2xl md:text-5xl font-medium text-black mb-4"
+            className="text-2xl md:text-5xl font-normal text-black mb-4"
           >
             Cyberk Solutions
           </h2>
           <p
             ref={pRef}
-            className="text-base md:text-xl text-[#292929] font-light"
+            className="text-base md:text-xl text-[#292929] font-extralight"
           >
             Cyberk is built for founders who can’t afford to wait. We deliver
             MVPs in less than 30 days, combining speed with quality and

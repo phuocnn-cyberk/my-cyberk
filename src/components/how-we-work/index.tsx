@@ -77,13 +77,13 @@ export const HowWeWorkSection: FC = () => {
         <div className="text-center max-w-[733px] mx-auto mb-6 md:mb-20">
           <h2
             ref={titleRef}
-            className="text-2xl md:text-5xl leading-tight font-medium text-[#212121] mb-2 md:mb-6"
+            className="text-2xl md:text-5xl leading-tight font-normal text-[#212121] mb-2 md:mb-6"
           >
             How We Work
           </h2>
           <p
             ref={pRef}
-            className="text-sm md:text-xl font-normal leading-tight text-[#212121]"
+            className="text-sm md:text-xl font-extralight leading-tight text-[#212121]"
           >
             Cyberk is built for founders who can’t afford to wait. We deliver
             MVPs in less than 30 days, combining speed with quality and
@@ -133,7 +133,7 @@ export const HowWeWorkSection: FC = () => {
                   />
                   <p
                     className={cn(
-                      "text-sm md:text-lg transition-colors font-medium"
+                      "text-sm md:text-lg transition-colors font-normal"
                     )}
                   >
                     {step.label}

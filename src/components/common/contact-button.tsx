@@ -21,7 +21,7 @@ export const ContactButton: FC<ContactButtonProps> = ({
     >
       <Button
         className={cn(
-          "bg-[#2172E6] text-white text-sm font-normal btn-discover hover:text-black hover:bg-[#2172E6]/90 flex items-center gap-2",
+          "bg-[#2172E6] text-white text-sm font-light btn-discover hover:text-black hover:bg-[#2172E6]/90 flex items-center gap-2",
           className
         )}
       >

@@ -17,7 +17,7 @@ export const MenuItem: FC<MenuItemProps> = ({
         "px-4 py-2 cursor-pointer text-sm transition-colors duration-300 flex items-center",
         isActive
           ? "text-[#212121]"
-          : "text-[#4B4B4B] font-light hover:text-black",
+          : "text-[#4B4B4B] font-extralight hover:text-black",
         className
       )}
       {...props}

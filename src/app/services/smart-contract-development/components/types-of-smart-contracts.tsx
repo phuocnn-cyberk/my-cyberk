@@ -43,7 +43,7 @@ const TypesOfSmartContracts: FC = () => {
                 {contractTypes.map((item, index) => (
                   <h3
                     key={index}
-                    className="text-xl md:text-2xl font-light text-black pb-6"
+                    className="text-lg md:text-2xl font-extralight text-black pb-6"
                   >
                     {item}
                   </h3>

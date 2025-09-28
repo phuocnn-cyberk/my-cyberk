@@ -51,7 +51,7 @@ export const FaqSection: FC = () => {
   return (
     <section className="bg-white py-24">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h2 className="text-2xl md:text-5xl leading-tight font-medium text-center mb-10 text-[#181818]">
+        <h2 className="text-2xl md:text-5xl leading-tight font-normal text-center mb-10 text-[#181818]">
           Frequently Asked Questions
         </h2>
         <Accordion type="single" collapsible defaultValue="item-0">
@@ -61,7 +61,7 @@ export const FaqSection: FC = () => {
               value={`item-${index}`}
               className="border-b border-black/10"
             >
-              <AccordionTrigger className="text-base md:text-2xl py-5 md:py-10 font-light hover:no-underline text-black">
+              <AccordionTrigger className="text-base md:text-2xl py-5 md:py-10 font-extralight hover:no-underline text-black">
                 <span className="text-[#2684FF] font-semibold text-base md:text-2xl">
                   {faq.id}
                 </span>

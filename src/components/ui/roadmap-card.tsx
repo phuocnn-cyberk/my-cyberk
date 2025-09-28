@@ -72,7 +72,7 @@ export function RoadmapCard({
                 </Badge>
 
                 {/* Title + Description */}
-                <h4 className="text-sm font-medium">{item.title}</h4>
+                <h4 className="text-sm font-normal">{item.title}</h4>
                 <p className="text-xs text-muted-foreground mt-1">
                   {item.description}
                 </p>

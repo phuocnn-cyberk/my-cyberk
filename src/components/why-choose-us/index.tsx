@@ -45,10 +45,10 @@ const FeatureCard: FC<FeatureCardProps> = ({ feature }) => (
           className="w-full h-full"
         />
       </div>
-      <h3 className="text-base md:text-2xl font-medium text-black mb-4">
+      <h3 className="text-base md:text-2xl font-normal text-black mb-4">
         {feature.title}
       </h3>
-      <p className="text-xs md:text-sm text-[#212121] font-normal leading-relaxed">
+      <p className="text-xs md:text-sm text-[#212121] font-extralight leading-relaxed">
         {feature.description}
       </p>
     </CardContent>
@@ -60,10 +60,10 @@ export const WhyChooseUsSection: FC = () => {
     <section className="bg-white py-15 md:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-6 md:mb-16">
-          <h2 className="text-2xl md:text-5xl font-medium text-black mb-4 md:mb-6">
+          <h2 className="text-2xl md:text-5xl font-normal text-black mb-4 md:mb-6">
             Why Choose Us
           </h2>
-          <p className="text-sm md:text-xl text-[#212121] font-normal">
+          <p className="text-sm md:text-xl text-[#212121] font-extralight">
             Cyberk is a trusted Web3 development partner, delivering speed,
             reliability, and innovation to help startups always lead the market
           </p>

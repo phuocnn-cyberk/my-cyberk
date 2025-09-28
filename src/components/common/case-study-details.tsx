@@ -32,7 +32,7 @@ export const CaseStudyDetails: FC<CaseStudyDetailsProps> = ({
         <div className="max-w-[883px] mx-auto space-y-10 md:space-y-16">
           {initialSections.map((section, index) => (
             <div key={index}>
-              <h2 className="text-2xl md:text-[36px] font-bold mb-3 md:mb-4 text-[#212121]">
+              <h2 className="text-2xl md:text-[36px] font-semibold mb-3 md:mb-4 text-[#212121]">
                 {section.title}
               </h2>
               <div className="space-y-4">
@@ -58,7 +58,7 @@ export const CaseStudyDetails: FC<CaseStudyDetailsProps> = ({
         <div className="max-w-[883px] mx-auto">
           {finalSections.map((section, index) => (
             <div key={index}>
-              <h2 className="text-2xl md:text-[36px] font-bold mb-3 md:mb-4 text-[#212121]">
+              <h2 className="text-2xl md:text-[36px] font-semibold mb-3 md:mb-4 text-[#212121]">
                 {section.title}
               </h2>
               <div className="space-y-4">

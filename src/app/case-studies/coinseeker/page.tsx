@@ -62,19 +62,19 @@ const CoinseekerPage: FC = () => {
               height={32}
               className="mx-auto mb-6"
             />
-            <h1 className="mb-6 text-2xl md:text-5xl font-medium leading-tight text-[#2684FF]">
+            <h1 className="mb-6 text-2xl md:text-5xl font-normal leading-tight text-[#2684FF]">
               Revenue Increased!{" "}
               <span className="text-[#212121]">
                 5000% faster revenue ramp from earlier launch + user adoption
               </span>
             </h1>
-            <p className="leading-tight mb-6 md:max-w-[1120px] mx-auto text-sm md:text-2xl font-light">
+            <p className="leading-tight mb-6 md:max-w-[1120px] mx-auto text-sm md:text-2xl font-extralight">
               Coinseeker is a blockchain data analytics platform that helps
               users discover new investment opportunities, track market trends,
               and manage digital asset portfolios intelligently.
             </p>
             <Link href="#" target="_blank">
-              <Button className="h-11 !px-6 text-sm md:text-base font-normal group bg-[#2684FF] hover:text-black btn-discover">
+              <Button className="h-11 !px-6 text-sm md:text-base font-extralight group bg-[#2684FF] hover:text-black btn-discover">
                 Visit website
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>

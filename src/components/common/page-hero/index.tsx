@@ -31,13 +31,13 @@ export const PageHero: FC<PageHeroProps> = ({
       <div className="container mx-auto px-4 py-20 md:py-[175px]">
         <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-6 md:gap-[60px]">
           <div>
-            <h1 className="text-xl md:text-2xl font-medium text-[#2684FF] mb-4">
+            <h1 className="text-xl md:text-2xl font-normal text-[#2684FF] mb-4">
               {title}
             </h1>
-            <h2 className="text-2xl md:text-5xl font-medium text-black mb-4 md:mb-8">
+            <h2 className="text-2xl md:text-5xl font-normal text-black mb-4 md:mb-8">
               {heading}
             </h2>
-            <p className="text-sm md:text-2xl font-light text-[#212121] mb-4 md:mb-8 leading-relaxed">
+            <p className="text-sm md:text-2xl font-extralight text-[#212121] mb-4 md:mb-8 leading-relaxed">
               {description}
             </p>
             {button && (

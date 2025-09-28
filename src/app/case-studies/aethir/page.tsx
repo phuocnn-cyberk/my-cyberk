@@ -63,13 +63,13 @@ const AethirPage: FC = () => {
               height={56}
               className="mx-auto mb-6 max-md:w-[129px] max-md:h-[40px]"
             />
-            <h1 className="mb-6 text-2xl md:text-5xl font-medium leading-tight text-[#2684FF]">
+            <h1 className="mb-6 text-2xl md:text-5xl font-normal leading-tight text-[#2684FF]">
               Time Saved!{" "}
               <span className="text-[#212121]">
                 Up to 6 months faster MVP delivery vs. in-house
               </span>
             </h1>
-            <p className="leading-tight mb-6 md:max-w-[1120px] mx-auto text-sm md:text-2xl font-light">
+            <p className="leading-tight mb-6 md:max-w-[1120px] mx-auto text-sm md:text-2xl font-extralight">
               Aethir is a decentralized cloud computing platform that aggregates
               GPU power from enterprises, data centers, and individuals
               worldwide to provide GPU-as-a-Service for AI, gaming, and
@@ -78,7 +78,7 @@ const AethirPage: FC = () => {
               traditional cloud services.
             </p>
             <Link href="#" target="_blank">
-              <Button className="h-11 !px-6 text-sm md:text-base font-normal group bg-[#2684FF] hover:text-black btn-discover">
+              <Button className="h-11 !px-6 text-sm md:text-base font-extralight group bg-[#2684FF] hover:text-black btn-discover">
                 Visit website
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>

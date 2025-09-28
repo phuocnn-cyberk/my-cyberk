@@ -21,7 +21,7 @@ export const HeroSection: FC = () => {
           </span>
         </div>
 
-        <h1 className="text-5xl text-[#000000] md:text-7xl font-bold mb-6 max-w-4xl leading-tight">
+        <h1 className="text-5xl text-[#000000] md:text-7xl font-semibold mb-6 max-w-4xl leading-tight">
           <span className="flex items-center justify-center gap-4">
             Fastest
             <Image src="/bolt.svg" alt="bolt" width={43} height={62} />
@@ -30,7 +30,7 @@ export const HeroSection: FC = () => {
           Development Partner
         </h1>
 
-        <p className="max-w-[1000px] font-light text-2xl text-[#161616] mb-8">
+        <p className="max-w-[1000px] font-extralight text-2xl text-[#161616] mb-8">
           Cyberk is the fastest blockchain development partner for startups -
           launch your MVP in 30 days so you’re always ready for the next big
           opportunity.

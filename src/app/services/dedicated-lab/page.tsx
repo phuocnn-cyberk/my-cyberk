@@ -14,20 +14,20 @@ const DedicatedLabPage: FC = () => {
         <div className="container mx-auto relative flex h-full items-center px-5">
           <div className="grid w-full grid-cols-1 items-center lg:grid-cols-12 gap-5 md:gap-0 max-md:mt-20">
             <div className="lg:col-span-6">
-              <h1 className="mb-4 md:mb-6 text-sm md:text-2xl font-bold text-[#2684FF]">
+              <h1 className="mb-4 md:mb-6 text-sm md:text-2xl font-semibold text-[#2684FF]">
                 Dedicated Lab
               </h1>
-              <h2 className="mb-2 md:mb-6 text-2xl md:text-5xl font-medium">
+              <h2 className="mb-2 md:mb-6 text-2xl md:text-5xl font-normal">
                 Cyberk and the client collaboratively form a long-term
                 development team
               </h2>
-              <p className="leading-tight mb-8 md:mb-10 md:max-w-[450px] text-sm md:text-2xl font-light">
+              <p className="leading-tight mb-8 md:mb-10 md:max-w-[450px] text-sm md:text-2xl font-extralight">
                 This team will support you throughout the build, launch, and
                 scaling phases, ensuring maximum stability and flexibility.
               </p>
               <ContactButton
                 text="CONTACT US"
-                className="h-11 !px-6 text-sm md:text-base font-normal"
+                className="h-11 !px-6 text-sm md:text-base font-extralight"
               />
             </div>
             <div className="flex justify-center lg:col-span-6">

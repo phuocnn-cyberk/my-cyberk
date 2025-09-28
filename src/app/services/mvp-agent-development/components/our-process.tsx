@@ -40,10 +40,10 @@ const OurProcess: FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-12 md:gap-18 md:h-[892px]">
           <div className="md:col-span-6">
-            <p className="mb-6 text-base font-medium text-[#2684FF] md:text-lg">
+            <p className="mb-6 text-base font-normal text-[#2684FF] md:text-lg">
               {processData.eyebrow}
             </p>
-            <h2 className="mb-6 text-2xl font-medium leading-tight text-[#212121] md:text-5xl">
+            <h2 className="mb-6 text-2xl font-normal leading-tight text-[#212121] md:text-5xl">
               {processData.title}
             </h2>
             <p className="text-sm text-[#212121] md:text-base">
@@ -60,7 +60,7 @@ const OurProcess: FC = () => {
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="max-w-[384px]">
-                      <h3 className="text-base font-medium text-[#212121] md:text-xl">
+                      <h3 className="text-base font-normal text-[#212121] md:text-xl">
                         {step.title}
                       </h3>
                       {step.description && (
