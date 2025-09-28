@@ -127,6 +127,24 @@
   html {
     overflow-y: scroll;
   }
+
+  .btn-discover {
+    @apply relative overflow-hidden isolate transition-colors duration-300;
+  }
+  
+  .btn-discover::before {
+    @apply content-[''] absolute top-0 left-0 w-full h-full bg-white transition-transform duration-300 ease-in-out -z-10 translate-y-full;
+  }
+  
+  @media (hover: hover) {
+    .btn-discover:hover::before {
+      @apply translate-y-0;
+    }
+  
+    .btn-discover:hover {
+      @apply text-black;
+    }
+  }
 }
 
 @keyframes marquee {
