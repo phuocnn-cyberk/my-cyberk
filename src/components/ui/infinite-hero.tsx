@@ -288,42 +288,44 @@ export default function InfiniteHero() {
 
       <div className="pointer-events-none absolute inset-0 [background:radial-gradient(120%_80%_at_50%_50%,_transparent_40%,_white_100%)]" />
 
-      <div className="relative z-10 flex h-svh w-full items-center justify-center px-6">
-        <div className="text-center">
-          <h1
-            ref={h1Ref}
-            className="text-[32px] md:text-7xl font-bold mb-6 lg:max-w-4xl leading-tight"
-          >
-            <span className="flex items-center justify-center gap-4">
-              Fastest
-              <Image src="/bolt.svg" alt="bolt" width={43} height={62} />
-              Blockchain
-            </span>
-            Development Partner
-          </h1>
-          <p
-            ref={pRef}
-            className="max-w-[1000px] font-light text-base lg:text-2xl text-black/70 mb-8"
-          >
-            Cyberk is the fastest blockchain development partner for startups -
-            launch your MVP in 30 days so you’re always ready for the next big
-            opportunity.
-          </p>
+      <div className="relative z-10 flex h-svh w-full flex-col lg:items-center lg:justify-center lg:flex-row px-6">
+        <div className="flex-1 flex items-center justify-center">
+          <div className="text-center">
+            <h1
+              ref={h1Ref}
+              className="text-[32px] md:text-7xl font-bold mb-6 lg:max-w-4xl leading-tight"
+            >
+              <span className="flex items-center justify-center gap-4">
+                Fastest
+                <Image src="/bolt.svg" alt="bolt" width={43} height={62} />
+                Blockchain
+              </span>
+              Development Partner
+            </h1>
+            <p
+              ref={pRef}
+              className="max-w-[1000px] font-light text-base lg:text-2xl text-black/70 mb-8"
+            >
+              Cyberk is the fastest blockchain development partner for startups
+              - launch your MVP in 30 days so you’re always ready for the next
+              big opportunity.
+            </p>
 
-          <div
-            ref={ctaRef}
-            className="lg:mb-20 mt-10 flex flex-row items-center justify-center"
-          >
-            <ContactButton className="text-base h-11 !px-6" />
+            <div
+              ref={ctaRef}
+              className="lg:mb-20 mt-10 flex flex-row items-center justify-center"
+            >
+              <ContactButton className="text-base h-11 !px-6" />
+            </div>
           </div>
         </div>
-      </div>
-      <div className="absolute bottom-10 left-1/2 z-20 hidden w-full max-w-[1160px] -translate-x-1/2 px-4 md:block">
-        <div className="rounded-lg bg-white p-2 shadow-[0px_10px_40px_0px_rgba(33,114,230,0.1)]">
-          <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
-            {STATS_DATA.map((stat) => (
-              <StatItem key={stat.value} {...stat} />
-            ))}
+        <div className="pb-10 lg:absolute lg:bottom-10 lg:left-1/2 lg:z-20 w-full max-w-[1160px] lg:-translate-x-1/2 lg:px-4">
+          <div className="rounded-lg bg-white p-2 shadow-[0px_10px_40px_0px_rgba(33,114,230,0.1)]">
+            <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
+              {STATS_DATA.map((stat) => (
+                <StatItem key={stat.value} {...stat} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
