@@ -21,7 +21,7 @@ const SERVICES_DATA = [
     title: "Dedicated Lab",
     description:
       "We dig deep to understand your goals, challenge assumptions, and test feasibility. If an idea doesn’t make sense, we’ll advise against building it.",
-    path: "#",
+    path: "/services/dedicated-lab",
   },
   {
     title: "MVP Agent Development",
