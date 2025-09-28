@@ -1,6 +1,9 @@
-import { FC } from "react";
+"use client";
+
+import { FC, useRef } from "react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
+import { useFadeInStagger } from "@/lib/animations";
 
 const STORIES_DATA = [
   {
@@ -83,19 +86,40 @@ const StoryCard: FC<StoryCardProps> = ({ story }) => (
 );
 
 export const SuccessStoriesSection: FC = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const pRef = useRef<HTMLParagraphElement>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  useFadeInStagger({
+    scopeRef: sectionRef,
+    titleRef,
+    pRef,
+    ctaRef: gridRef,
+  });
+
   return (
-    <section className="bg-[#FAFAFA] py-24">
+    <section ref={sectionRef} className="bg-[#FAFAFA] py-24">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-2xl md:text-5xl leading-tight font-medium text-[#212121] mb-4 md:mb-6">
+          <h2
+            ref={titleRef}
+            className="text-2xl md:text-5xl leading-tight font-medium text-[#212121] mb-4 md:mb-6"
+          >
             Success Stories
           </h2>
-          <p className="text-sm md:text-xl font-normal leading-tight text-[#212121]">
+          <p
+            ref={pRef}
+            className="text-sm md:text-xl font-normal leading-tight text-[#212121]"
+          >
             Find out how Cyberk performs for some of the world’s most dynamic
             businesses.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div
+          ref={gridRef}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+        >
           {STORIES_DATA.map((story) => (
             <StoryCard key={story.logo + story.metric} story={story} />
           ))}

@@ -8,6 +8,7 @@ import { FC, useMemo, useRef } from "react";
 import * as THREE from "three";
 import Image from "next/image";
 import { ContactButton } from "@/components/common/contact-button";
+import { useFadeInStagger } from "@/lib/animations";
 
 gsap.registerPlugin(SplitText);
 
@@ -260,56 +261,18 @@ export default function InfiniteHero() {
   const pRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
 
+  useFadeInStagger({
+    scopeRef: rootRef,
+    titleRef: h1Ref,
+    pRef,
+    ctaRef,
+  });
+
   useGSAP(
     () => {
-      const ctas = ctaRef.current ? Array.from(ctaRef.current.children) : [];
-
-      const h1Split = new SplitText(h1Ref.current, { type: "lines" });
-      const pSplit = new SplitText(pRef.current, { type: "lines" });
-
       gsap.set(bgRef.current, { filter: "blur(28px)" });
-      gsap.set(h1Split.lines, {
-        opacity: 0,
-        y: 24,
-        filter: "blur(8px)",
-      });
-      gsap.set(pSplit.lines, {
-        opacity: 0,
-        y: 16,
-        filter: "blur(6px)",
-      });
-      if (ctas.length) gsap.set(ctas, { opacity: 0, y: 16 });
-
       const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
-      tl.to(bgRef.current, { filter: "blur(0px)", duration: 1.2 }, 0)
-        .to(
-          h1Split.lines,
-          {
-            opacity: 1,
-            y: 0,
-            filter: "blur(0px)",
-            duration: 0.8,
-            stagger: 0.1,
-          },
-          0.3
-        )
-        .to(
-          pSplit.lines,
-          {
-            opacity: 1,
-            y: 0,
-            filter: "blur(0px)",
-            duration: 0.6,
-            stagger: 0.08,
-          },
-          "-=0.3"
-        )
-        .to(ctas, { opacity: 1, y: 0, duration: 0.6, stagger: 0.08 }, "-=0.2");
-
-      return () => {
-        h1Split.revert();
-        pSplit.revert();
-      };
+      tl.to(bgRef.current, { filter: "blur(0px)", duration: 1.2 }, 0);
     },
     { scope: rootRef }
   );

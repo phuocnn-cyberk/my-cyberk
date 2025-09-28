@@ -3,6 +3,7 @@
 import { FC, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { useFadeInStagger } from "@/lib/animations";
 
 const PROCESS_STEPS = [
   {
@@ -35,6 +36,18 @@ export const HowWeWorkSection: FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
+  const sectionRef = useRef<HTMLElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const pRef = useRef<HTMLParagraphElement>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  useFadeInStagger({
+    scopeRef: sectionRef,
+    titleRef,
+    pRef,
+    ctaRef: gridRef,
+  });
+
   const startTimer = () => {
     if (timerRef.current) {
       clearInterval(timerRef.current);
@@ -59,20 +72,29 @@ export const HowWeWorkSection: FC = () => {
   };
 
   return (
-    <section className="bg-white py-24">
+    <section ref={sectionRef} className="bg-white py-24">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-[733px] mx-auto mb-6 md:mb-20">
-          <h2 className="text-2xl md:text-5xl leading-tight font-medium text-[#212121] mb-2 md:mb-6">
+          <h2
+            ref={titleRef}
+            className="text-2xl md:text-5xl leading-tight font-medium text-[#212121] mb-2 md:mb-6"
+          >
             How We Work
           </h2>
-          <p className="text-sm md:text-xl font-normal leading-tight text-[#212121]">
+          <p
+            ref={pRef}
+            className="text-sm md:text-xl font-normal leading-tight text-[#212121]"
+          >
             Cyberk is built for founders who can’t afford to wait. We deliver
             MVPs in less than 30 days, combining speed with quality and
             security.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div
+          ref={gridRef}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+        >
           <div className="relative rounded-2xl overflow-hidden aspect-[672/421]">
             {PROCESS_STEPS.map((step, index) => (
               <Image
