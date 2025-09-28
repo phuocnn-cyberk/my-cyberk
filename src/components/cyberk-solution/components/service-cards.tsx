@@ -45,7 +45,7 @@ export const ServiceCards: FC = () => {
                   {service.title}
                 </h3>
               </div>
-              <p className="mt-5 max-w-[213px] text-sm font-normal text-[#828282] md:text-base">
+              <p className="mt-5 text-sm font-normal text-[#828282] md:text-base">
                 {service.description}
               </p>
               <div className="mt-auto pt-6">
