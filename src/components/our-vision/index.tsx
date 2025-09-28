@@ -32,7 +32,7 @@ const VisionImage: FC<VisionImageProps> = ({
 export const OurVisionSection: FC = () => {
   return (
     <section className="bg-[#FAFAFA] py-15 md:py-24">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-5">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-16 mb-5 md:mb-20">
           <div className="lg:col-span-1">
             <h2 className="text-2xl md:text-5xl font-medium text-black mb-2 md:mb-16">
@@ -64,45 +64,45 @@ export const OurVisionSection: FC = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
+        <div className="flex justify-center gap-2 md:grid md:grid-cols-5 md:gap-4 md:p-10">
           <VisionImage
-            src="/images/our-vision-1.png"
+            src="/images/kanz-cyberk.png"
             alt="Vision Image 1"
-            width={416}
-            height={541}
-            containerClassName="lg:col-span-2"
+            width={435}
+            height={542}
+            containerClassName="h-[293px] w-[221px] md:col-span-2 md:h-[542px] md:w-full"
           />
-          <div className="lg:col-span-3 flex flex-col gap-8">
-            <div className="flex gap-4">
+          <div className="flex flex-col gap-2 md:col-span-3 md:gap-4">
+            <div className="flex flex-col gap-2 md:flex-row md:gap-4">
               <VisionImage
                 src="/images/our-vision-2.png"
                 alt="Vision Image 2"
                 width={200}
                 height={264}
-                containerClassName="w-[31.59%]"
+                containerClassName="h-[68px] w-[106px] md:h-[264px] md:w-[31.59%]"
               />
               <VisionImage
                 src="/images/our-vision-3.png"
                 alt="Vision Image 3"
                 width={433}
                 height={264}
-                containerClassName="w-[68.41%]"
+                containerClassName="h-[68px] w-[106px] md:h-[264px] md:w-[68.41%]"
               />
             </div>
-            <div className="flex gap-4">
+            <div className="flex flex-col gap-2 md:flex-row md:gap-4">
               <VisionImage
                 src="/images/our-vision-4.png"
                 alt="Vision Image 4"
                 width={433}
                 height={264}
-                containerClassName="w-[68.41%]"
+                containerClassName="h-[68px] w-[106px] md:h-[264px] md:w-[68.41%]"
               />
               <VisionImage
                 src="/images/our-vision-5.png"
                 alt="Vision Image 5"
                 width={200}
                 height={264}
-                containerClassName="w-[31.59%]"
+                containerClassName="h-[68px] w-[106px] md:h-[264px] md:w-[31.59%]"
               />
             </div>
           </div>

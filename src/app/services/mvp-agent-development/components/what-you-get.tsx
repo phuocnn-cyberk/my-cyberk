@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, FC } from "react";
+import { useState, useEffect, FC } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -50,7 +50,7 @@ const WhatYouGet: FC = () => {
         setProgress(0);
       }, 500);
     }
-  }, [progress, features.length]);
+  }, [progress]);
 
   const handleFeatureClick = (index: number) => {
     setCurrentFeature(index);

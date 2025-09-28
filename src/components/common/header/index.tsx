@@ -29,6 +29,13 @@ const SERVICE_SUB_ITEMS = [
   { label: "MVP Agent Development", path: "/services/mvp-agent-development" },
 ];
 
+const CASE_STUDIES_SUB_ITEMS = [
+  { label: "Portfolio - Aethir", path: "/case-studies/aethir" },
+  { label: "Portfolio - Coinseeker", path: "/case-studies/coinseeker" },
+  { label: "Portfolio - Helix", path: "/case-studies/helix" },
+  { label: "Portfolio - Oracler", path: "/case-studies/oracler" },
+];
+
 const MENU_LIST = [
   {
     label: "Home",
@@ -41,7 +48,8 @@ const MENU_LIST = [
   },
   {
     label: "Case Studies",
-    path: "#",
+    path: "/case-studies",
+    subItems: CASE_STUDIES_SUB_ITEMS,
   },
   {
     label: "About Us",

@@ -10,9 +10,9 @@ import TypesOfSmartContracts from "./components/types-of-smart-contracts";
 const SmartContractDevelopmentPage: FC = () => {
   return (
     <main className="min-h-screen bg-white text-[#212121]">
-      <GridPatternSpotlight>
-        <div className="container mx-auto relative flex min-h-screen items-center px-5 py-19">
-          <div className="grid w-full grid-cols-1 items-center lg:grid-cols-12 gap-5 md:gap-0">
+      <GridPatternSpotlight className="h-[747px]">
+        <div className="container mx-auto relative flex h-full items-center px-5">
+          <div className="grid w-full grid-cols-1 items-center lg:grid-cols-12 gap-5 md:gap-0 max-md:mt-20">
             <div className="lg:col-span-6">
               <h1 className="mb-4 md:mb-6 text-sm md:text-2xl font-bold text-[#2684FF]">
                 Smart Contract Development
