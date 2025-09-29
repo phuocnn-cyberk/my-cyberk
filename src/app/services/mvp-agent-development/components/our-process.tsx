@@ -37,9 +37,9 @@ const processData = {
 const OurProcess: FC = () => {
   return (
     <section className="bg-[#FAFAFA] py-15 md:py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-12">
-          <div className="md:col-span-6">
+          <div className="md:col-span-6 px-5">
             <p className="mb-6 text-base font-normal text-[#2684FF] md:text-lg">
               {processData.eyebrow}
             </p>
@@ -50,8 +50,8 @@ const OurProcess: FC = () => {
               {processData.description}
             </p>
           </div>
-          <div className="md:col-span-6 h-[427px] md:h-[706px] overflow-y-auto">
-            <ContainerScroll className="space-y-4">
+          <div className="md:col-span-6 h-[427px] md:h-[706px] overflow-y-auto overflow-x-hidden">
+            <ContainerScroll className="space-y-4 px-5">
               {processData.steps.map((step, index) => (
                 <CardSticky
                   key={step.id}
