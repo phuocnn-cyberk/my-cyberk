@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
-import { FC, useMemo, useRef } from "react";
+import { FC, memo, useMemo, useRef } from "react";
 import * as THREE from "three";
 import Image from "next/image";
 import { ContactButton } from "@/components/common/contact-button";
@@ -91,15 +91,16 @@ const StatItem: FC<StatItemProps> = ({ value, description }) => (
   </div>
 );
 
-function ShaderBackground({
-  vertexShader = `
+const ShaderBackground: FC<ShaderBackgroundProps> = memo(
+  ({
+    vertexShader = `
     varying vec2 vUv;
     void main() {
       vUv = uv;
     gl_Position = vec4(position, 1.0);
     }
   `,
-  fragmentShader = `
+    fragmentShader = `
     precision highp float;
 
     varying vec2 vUv;
@@ -229,30 +230,31 @@ function ShaderBackground({
       gl_FragColor = fragColor;
     }
   `,
-  uniforms = {},
-  className = "w-full h-full",
-}: ShaderBackgroundProps) {
-  const shaderUniforms = useMemo(
-    () => ({
-      u_time: { value: 0 },
-      u_resolution: { value: new THREE.Vector3(1, 1, 1) },
-      ...uniforms,
-    }),
-    [uniforms]
-  );
+    uniforms = {},
+    className = "w-full h-full",
+  }: ShaderBackgroundProps) => {
+    const shaderUniforms = useMemo(
+      () => ({
+        u_time: { value: 0 },
+        u_resolution: { value: new THREE.Vector3(1, 1, 1) },
+        ...uniforms,
+      }),
+      [uniforms]
+    );
 
-  return (
-    <div className={className}>
-      <Canvas className={className}>
-        <ShaderPlane
-          vertexShader={vertexShader}
-          fragmentShader={fragmentShader}
-          uniforms={shaderUniforms}
-        />
-      </Canvas>
-    </div>
-  );
-}
+    return (
+      <div className={className}>
+        <Canvas className={className} dpr={[1, 1.5]}>
+          <ShaderPlane
+            vertexShader={vertexShader}
+            fragmentShader={fragmentShader}
+            uniforms={shaderUniforms}
+          />
+        </Canvas>
+      </div>
+    );
+  }
+);
 
 export default function InfiniteHero() {
   const rootRef = useRef<HTMLDivElement>(null);
