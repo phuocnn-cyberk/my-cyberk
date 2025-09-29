@@ -90,7 +90,7 @@ export const Footer: FC = () => {
               <h2 className="text-2xl md:text-5xl font-normal text-[#2D2D2D] leading-tight lg:mb-8">
                 Ready To
                 <br />
-                Get Started!
+                Get Started?
               </h2>
               <ContactButton className="h-9 px-8 text-sm" />
             </div>
