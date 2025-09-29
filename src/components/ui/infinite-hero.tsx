@@ -256,6 +256,8 @@ const ShaderBackground: FC<ShaderBackgroundProps> = memo(
   }
 );
 
+ShaderBackground.displayName = "ShaderBackground";
+
 export default function InfiniteHero() {
   const rootRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
