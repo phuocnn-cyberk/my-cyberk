@@ -38,7 +38,7 @@ const OurProcess: FC = () => {
   return (
     <section className="bg-[#FAFAFA] py-15 md:py-20">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-12 md:gap-18 md:h-[892px]">
+        <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-12">
           <div className="md:col-span-6">
             <p className="mb-6 text-base font-normal text-[#2684FF] md:text-lg">
               {processData.eyebrow}
@@ -46,30 +46,35 @@ const OurProcess: FC = () => {
             <h2 className="mb-6 text-2xl font-normal leading-tight text-[#212121] md:text-5xl">
               {processData.title}
             </h2>
-            <p className="text-sm text-[#212121] md:text-base">
+            <p className="text-sm text-[#212121] md:text-base font-light">
               {processData.description}
             </p>
           </div>
-          <div className="md:col-span-6 h-[500px] md:h-full overflow-y-auto">
-            <ContainerScroll className="space-y-6">
+          <div className="md:col-span-6 h-[427px] md:h-[706px] overflow-y-auto">
+            <ContainerScroll className="space-y-4">
               {processData.steps.map((step, index) => (
                 <CardSticky
                   key={step.id}
                   index={index}
-                  className="flex flex-col justify-center rounded-2xl border bg-white p-6 shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] md:h-[260px] md:w-[588px] md:p-8"
+                  className="flex flex-col rounded-lg bg-[#FFFFFF99] p-6 h-[180px] md:h-[300px] md:w-[588px] md:px-8 md:py-10"
+                  style={{
+                    boxShadow:
+                      "0px 4px 4px 0px #3535351A, 4px 0px 4px 0px #0000001A",
+                    backdropFilter: "blur(10px)",
+                  }}
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="max-w-[384px]">
-                      <h3 className="text-base font-normal text-[#212121] md:text-xl">
+                      <h3 className="text-base font-semibold text-[#212121] md:text-xl">
                         {step.title}
                       </h3>
                       {step.description && (
-                        <p className="mt-3 text-xs text-[#232323] md:mt-6 md:text-base">
+                        <p className="mt-3 text-xs font-light text-[#232323] md:mt-6 md:text-base">
                           {step.description}
                         </p>
                       )}
                     </div>
-                    <div className="text-2xl font-medium text-[#2684FF] md:text-[40px]">
+                    <div className="text-2xl font-semibold text-[#2684FF] md:text-[40px]">
                       {String(index + 1).padStart(2, "0")}
                     </div>
                   </div>

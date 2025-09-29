@@ -50,8 +50,7 @@ const CardSticky = React.forwardRef<HTMLDivElement, CardStickyProps>(
         layout="position"
         style={{
           top: y,
-          zIndex: z,
-          backfaceVisibility: "hidden",
+          z,
           ...style,
         }}
         className={cn("sticky", className)}
