@@ -27,7 +27,7 @@ const FOOTER_LINKS = {
     },
     { label: "Facebook", href: "https://www.facebook.com/Cyberk.io" },
     { label: "Telegram", href: "https://t.me/cyberk_anderson" },
-    { label: "Hello@cyberk.io", href: "mailto:Hello@cyberk.io" },
+    { label: "anderson@cyberk.io", href: "mailto:anderson@cyberk.io" },
   ],
 };
 
@@ -72,7 +72,7 @@ const FooterLinkColumn: FC<{
             target={link.href.includes("https") ? "_blank" : "_self"}
             className="text-[#717070] whitespace-nowrap hover:text-black cursor-pointer"
           >
-            {link.label}
+            {link.label.charAt(0).toUpperCase() + link.label.slice(1)}
           </Link>
         </li>
       ))}
